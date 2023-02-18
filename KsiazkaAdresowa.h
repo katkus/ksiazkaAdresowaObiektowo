@@ -15,6 +15,7 @@ class KsiazkaAdresowa
 
 public:
     //string wczytajLinie();
+    KsiazkaAdresowa();
     void rejestracjaUzytkownika();
     void wypiszWszystkichUzytkownikow();
 };
