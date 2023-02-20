@@ -1,5 +1,5 @@
-#ifndef UZYTKOWNIKMENEDZER_H
-#define UZYTKOWNIKMENEDZER_H
+#ifndef ADRESATMENEDZER_H
+#define ADRESATMENEDZER_H
 
 #include <iostream>
 #include <vector>
@@ -7,9 +7,7 @@
 #include <fstream>
 #include <sstream>
 
-
 #include "Uzytkownik.h"
-#include "AdresatMenedzer.h"
 #include "Adresat.h"
 #include "PlikZUzytkownikami.h"
 
@@ -33,4 +31,4 @@ public:
     void wypiszWszystkichUzytkownikow();
     void wczytajUzytkownikowZPliku();
 } ;
-#endif // UZYTKOWNIKMENEDZER_H
+#endif // ADRESATMENEDZER_H
