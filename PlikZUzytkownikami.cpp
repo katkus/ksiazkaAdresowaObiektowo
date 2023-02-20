@@ -1,17 +1,17 @@
 #include "PlikZUzytkownikami.h"
 
-PlikZUzytkownikami::PlikZUzytkownikami()
+/*PlikZUzytkownikami::PlikZUzytkownikami()
 {
     nazwaPlikuZUzytkownikami = "Uzytkownicy.txt";
-    daneJednegoUzytkownikaOddzielonePionowymiKreskami = "";
-    string pojedynczaDanaUzytkownika = "";
-    int numerPojedynczejDanejUzytkownika = 1;
-    string liniaZDanymiUzytkownika = "";
-}
+    //daneJednegoUzytkownikaOddzielonePionowymiKreskami = "";
+    //string pojedynczaDanaUzytkownika = "";
+    //int numerPojedynczejDanejUzytkownika = 1;
+    //string liniaZDanymiUzytkownika = "";Co bedzie z calym konstruktorem??
+}*/
 void PlikZUzytkownikami::dopiszUzytkownikaDoPliku(Uzytkownik uzytkownik)
 {
-    string liniaZDanymiUzytkownika;
-   // PlikZUzytkownikami plikZUzytkownikami;
+    fstream plikTekstowy;
+    string liniaZDanymiUzytkownika = "";
     plikTekstowy.open(nazwaPlikuZUzytkownikami.c_str(), ios::app);
 
     if (plikTekstowy.good() == true)
@@ -34,6 +34,7 @@ void PlikZUzytkownikami::dopiszUzytkownikaDoPliku(Uzytkownik uzytkownik)
 
 bool PlikZUzytkownikami::czyPlikJestPusty()
 {
+    fstream plikTekstowy;
     plikTekstowy.seekg(0, ios::end);
     if (plikTekstowy.tellg() == 0)
         return true;
@@ -54,7 +55,8 @@ vector <Uzytkownik> PlikZUzytkownikami::wczytajUzytkownikowZPliku()
 {
    Uzytkownik uzytkownik;
    vector <Uzytkownik> uzytkownicy;
-   string daneJednegoUzytkownikaOddzielonePionowymiKreskami;
+   fstream plikTekstowy;
+   string daneJednegoUzytkownikaOddzielonePionowymiKreskami="";
 
     plikTekstowy.open(nazwaPlikuZUzytkownikami.c_str(), ios::in);
 
@@ -67,14 +69,13 @@ vector <Uzytkownik> PlikZUzytkownikami::wczytajUzytkownikowZPliku()
         }
 
     }
-
     plikTekstowy.close();
     return uzytkownicy;
 }
 Uzytkownik PlikZUzytkownikami::pobierzDaneUzytkownika(string daneJednegoUzytkownikaOddzielonePionowymiKreskami)
 {
     Uzytkownik uzytkownik;
-    string pojedynczaDanaUzytkownika;
+    string pojedynczaDanaUzytkownika="";
     int numerPojedynczejDanejUzytkownika=1;
     for (int pozycjaZnaku = 0; pozycjaZnaku < daneJednegoUzytkownikaOddzielonePionowymiKreskami.length(); pozycjaZnaku++)
     {
@@ -86,32 +87,20 @@ Uzytkownik PlikZUzytkownikami::pobierzDaneUzytkownika(string daneJednegoUzytkown
         else
         {
             switch(numerPojedynczejDanejUzytkownika)
-            { //cout<<"test"<<endl;
+            {
             case 1:
-                {/*uzytkownik.id = atoi(pojedynczaDanaUzytkownika.c_str());
-                uzytkownik.ustawId(atoi(pojedynczaDanaUzytkownika.c_str()));*/
-                //int id;
+                {
                 uzytkownik.ustawId (atoi(pojedynczaDanaUzytkownika.c_str()));
-                //uzytkownik.ustawId(id);
-                // cout<<"dziala jakos"<<endl;
                 break;
                 }
             case 2:
                {
-                //uzytkownik.login = pojedynczaDanaUzytkownika;
-                //string login;
-                //login = pojedynczaDanaUzytkownika;
                 uzytkownik.ustawLogin(pojedynczaDanaUzytkownika);
-                //cout<<"dziala jakos"<<endl;
                 break;
                 }
             case 3:
-                {/*uzytkownik.haslo = pojedynczaDanaUzytkownika;
-                uzytkownik.ustawHaslo(pojedynczaDanaUzytkownika);*/
-                //string haslo;
-                //haslo = pojedynczaDanaUzytkownika;
+                {
                 uzytkownik.ustawHaslo(pojedynczaDanaUzytkownika);
-                //cout<<"dziala jakos"<<endl;
                 break;
                 }
             }
