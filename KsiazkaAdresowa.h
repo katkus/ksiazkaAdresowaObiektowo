@@ -22,6 +22,7 @@ public:
     uzytkownikMenedzer.wczytajUzytkownikowZPliku();
     };
     void rejestracjaUzytkownika();
+    void wylogowanieUzytkownika();
     void wypiszWszystkichUzytkownikow();
 };
 #endif // KSIAZKAADRESOWA_
