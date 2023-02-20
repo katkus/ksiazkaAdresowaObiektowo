@@ -6,10 +6,10 @@
     getline(cin, wejscie);
     return wejscie;
 }*/
-KsiazkaAdresowa::KsiazkaAdresowa()
+/*KsiazkaAdresowa::KsiazkaAdresowa()
 {
     uzytkownikMenedzer.wczytajUzytkownikowZPliku();
-}
+}*/
 void KsiazkaAdresowa::rejestracjaUzytkownika()
 {
     uzytkownikMenedzer.rejestracjaUzytkownika();

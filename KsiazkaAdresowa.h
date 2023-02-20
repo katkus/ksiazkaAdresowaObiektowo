@@ -2,6 +2,7 @@
 #define KSIAZKAADRESOWA_H
 
 #include <iostream>
+#include <string>
 
 #include "UzytkownikMenedzer.h"
 
@@ -12,10 +13,14 @@ class KsiazkaAdresowa
     //int idOstatniegoAdresata;
    // int idUsunietegoAdresata;
    UzytkownikMenedzer uzytkownikMenedzer;
+   const string nazwaPlikuZUzytkownikami;
 
 public:
     //string wczytajLinie();
-    KsiazkaAdresowa();
+    KsiazkaAdresowa(string nazwaPlikuZUzytkownikami) : uzytkownikMenedzer(nazwaPlikuZUzytkownikami)
+    {
+    uzytkownikMenedzer.wczytajUzytkownikowZPliku();
+    };
     void rejestracjaUzytkownika();
     void wypiszWszystkichUzytkownikow();
 };
