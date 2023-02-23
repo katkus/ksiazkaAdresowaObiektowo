@@ -1,6 +1,6 @@
-#include "UzytkownikMenedzer.h"
+#include "AdresatMenedzer.h"
 
-void UzytkownikMenedzer::rejestracjaUzytkownika()
+/*void UzytkownikMenedzer::rejestracjaUzytkownika()
 {
     Uzytkownik uzytkownik = podajDaneNowegoUzytkownika();
 
@@ -9,9 +9,14 @@ void UzytkownikMenedzer::rejestracjaUzytkownika()
 
     cout << endl << "Konto zalozono pomyslnie" << endl << endl;
     system("pause");
-}
-
-Uzytkownik UzytkownikMenedzer::podajDaneNowegoUzytkownika()
+}*/
+/*void Adresat::wylogowanieUzytkownika()
+{
+    idZalogowanegoUzytkownika = 0;
+    adresaci.clear();
+    return idZalogowanegoUzytkownika;
+}*/
+/*Uzytkownik UzytkownikMenedzer::podajDaneNowegoUzytkownika()
 {
     Uzytkownik uzytkownik;
 
@@ -65,9 +70,8 @@ bool UzytkownikMenedzer::czyIstniejeLogin(string login)
         cout << uzytkownicy[i].pobierzHaslo() << endl;
 
     }
- }
- void UzytkownikMenedzer::wczytajUzytkownikowZPliku()
+ }*/
+void AdresatMenedzer::wczytajAdresatowZPliku()
 {
-   uzytkownicy = plikZUzytkownikami.wczytajUzytkownikowZPliku();
+   adresaci = plikZAdresatami.wczytajAdresatowZPliku();
 }
-
