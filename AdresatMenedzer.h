@@ -9,26 +9,27 @@
 
 #include "Uzytkownik.h"
 #include "Adresat.h"
-#include "PlikZUzytkownikami.h"
+#include "PlikZAdresatami.h"
+#include "MetodyPomocnicze.h"
 
 using namespace std;
 
-class UzytkownikMenedzer
+class AdresatMenedzer
 {
     int idZalogowanegoUzytkownika;
-    vector <Uzytkownik> uzytkownicy;
-    const string nazwaPlikuZUzytkownikami;
+    int idOstatniegoAdresata;
+    vector <Adresat> adresaci;
+    const string nazwaPlikuZAdresatami;
 
-    Uzytkownik podajDaneNowegoUzytkownika();
+    Adresat podajDaneNowegoAdresata();
     int pobierzIdNowegoUzytkownika();
     bool czyIstniejeLogin(string login);
-    PlikZUzytkownikami plikZUzytkownikami;
+    PlikZAdresatami plikZAdresatami;
 
 public:
-    UzytkownikMenedzer (string nazwaPlikuZUzytkownikami) : plikZUzytkownikami(nazwaPlikuZUzytkownikami){};
-    void rejestracjaUzytkownika();
-    void wylogowanieUzytkownika();
-    void wypiszWszystkichUzytkownikow();
-    void wczytajUzytkownikowZPliku();
+   AdresatMenedzer (string nazwaPlikuZAdresatami) : plikZAdresatami(nazwaPlikuZAdresatami){};
+   // int wylogowanieUzytkownika();
+   // void wypiszWszystkichAdresatow();
+   void wczytajAdresatowZPliku();
 } ;
 #endif // ADRESATMENEDZER_H

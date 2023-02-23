@@ -10,10 +10,7 @@ void UzytkownikMenedzer::rejestracjaUzytkownika()
     cout << endl << "Konto zalozono pomyslnie" << endl << endl;
     system("pause");
 }
-void UzytkownikMenedzer::wylogowanieUzytkownika()
-{
-    exit(0);
-}
+
 Uzytkownik UzytkownikMenedzer::podajDaneNowegoUzytkownika()
 {
     Uzytkownik uzytkownik;

@@ -1,7 +1,7 @@
 #include "Adresat.h"
 
 
-void Adresat::ustawId (int noweId)
+/*void Adresat::ustawId (int noweId)
 {
     if (noweId >= 0)
         id = noweId;
@@ -59,4 +59,4 @@ string Adresat::pobierzEmail ()
 string Adresat::pobierzAdres ()
 {
     return adres;
-}
+}*/
