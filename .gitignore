@@ -1,6 +1,6 @@
-.git/
-.obj/
-.bin/
+git/
+obj/
+bin/
 ksiazkaAdresowaObiektowo*
 Uzytkownicy.txt
 Uzytkownicy2.txt
