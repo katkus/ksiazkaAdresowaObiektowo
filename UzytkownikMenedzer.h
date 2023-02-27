@@ -30,7 +30,7 @@ public:
     UzytkownikMenedzer (string nazwaPlikuZUzytkownikami) : plikZUzytkownikami(nazwaPlikuZUzytkownikami){};
     void rejestracjaUzytkownika();
     int logowanieUzytkownika();
-   // void wylogowanieUzytkownika();
+    int wylogowanieUzytkownika();
     void wypiszWszystkichUzytkownikow();
     void wczytajUzytkownikowZPliku();
 } ;

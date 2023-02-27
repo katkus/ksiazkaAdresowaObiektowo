@@ -105,4 +105,9 @@ int UzytkownikMenedzer::logowanieUzytkownika()
     system("read"); // Windows system("pause");
     return 0;
 }
-
+int UzytkownikMenedzer::wylogowanieUzytkownika()
+{
+    idZalogowanegoUzytkownika = 0;
+    uzytkownicy.clear();
+    return idZalogowanegoUzytkownika;
+}

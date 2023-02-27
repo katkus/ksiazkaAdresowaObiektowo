@@ -14,14 +14,14 @@ void KsiazkaAdresowa::rejestracjaUzytkownika()
 {
     uzytkownikMenedzer.rejestracjaUzytkownika();
 }
-void KsiazkaAdresowa::logowanieUzytkownika()
+int KsiazkaAdresowa::logowanieUzytkownika()
 {
     uzytkownikMenedzer.logowanieUzytkownika();
 }
-/*void KsiazkaAdresowa::wylogowanieUzytkownika()
+int KsiazkaAdresowa::wylogowanieUzytkownika()
 {
     uzytkownikMenedzer.wylogowanieUzytkownika();
-}*/
+}
 void KsiazkaAdresowa::wypiszWszystkichUzytkownikow()
 {
     uzytkownikMenedzer.wypiszWszystkichUzytkownikow();
