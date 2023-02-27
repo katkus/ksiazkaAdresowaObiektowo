@@ -25,8 +25,8 @@ public:
     adresatMenedzer.wczytajAdresatowZPliku();
     };
     void rejestracjaUzytkownika();
-    void logowanieUzytkownika();
-   // void wylogowanieUzytkownika();
+    int logowanieUzytkownika();
+    int wylogowanieUzytkownika();
     void wypiszWszystkichUzytkownikow();
     void wyswietlWszytskichAdresatow();
 };
