@@ -10,12 +10,6 @@
     cout << endl << "Konto zalozono pomyslnie" << endl << endl;
     system("pause");
 }*/
-/*void Adresat::wylogowanieUzytkownika()
-{
-    idZalogowanegoUzytkownika = 0;
-    adresaci.clear();
-    return idZalogowanegoUzytkownika;
-}*/
 /*Uzytkownik UzytkownikMenedzer::podajDaneNowegoUzytkownika()
 {
     Uzytkownik uzytkownik;
