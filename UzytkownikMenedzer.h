@@ -31,7 +31,9 @@ public:
     void rejestracjaUzytkownika();
     int logowanieUzytkownika();
     int wylogowanieUzytkownika();
+    void zmianaHaslaZalogowanegoUzytkownika();
     void wypiszWszystkichUzytkownikow();
     void wczytajUzytkownikowZPliku();
+    void zapiszWszystkichUzytkownikowDoPliku();
 } ;
 #endif // UZYTKOWNIKMENEDZER_H
