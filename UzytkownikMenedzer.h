@@ -34,6 +34,6 @@ public:
     void zmianaHaslaZalogowanegoUzytkownika();
     void wypiszWszystkichUzytkownikow();
     void wczytajUzytkownikowZPliku();
-    void zapiszWszystkichUzytkownikowDoPliku();
+    //void zapiszWszystkichUzytkownikowDoPliku();
 } ;
 #endif // UZYTKOWNIKMENEDZER_H

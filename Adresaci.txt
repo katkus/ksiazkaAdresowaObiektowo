@@ -1,0 +1,5 @@
+1|11|Ala|Nos|1111111|ala@|Gorzow Wlkp.|
+3|11|Janusz|Nowak|2222222|janusz@|Opole|
+1|11|Kasia|Kam|3333333|kasia@|Gdynia|
+3|11|Magda|Grym|4444444|magda@|Gdansk|
+5|11|Marcin|Kruk|6666666|marcin@|Szczecin|

@@ -1,15 +1,5 @@
 #include "KsiazkaAdresowa.h"
 
-/*string wczytajLinie()
-{
-    string wejscie = "";
-    getline(cin, wejscie);
-    return wejscie;
-}*/
-/*KsiazkaAdresowa::KsiazkaAdresowa()
-{
-    uzytkownikMenedzer.wczytajUzytkownikowZPliku();
-}*/
 void KsiazkaAdresowa::rejestracjaUzytkownika()
 {
     uzytkownikMenedzer.rejestracjaUzytkownika();
@@ -30,3 +20,11 @@ void KsiazkaAdresowa::wypiszWszystkichUzytkownikow()
 {
     uzytkownikMenedzer.wypiszWszystkichUzytkownikow();
 }
+int KsiazkaAdresowa::dodajAdresata(int idZalogowanegoUzytkownika)
+{
+    adresatMenedzer.dodajAdresata(idZalogowanegoUzytkownika);
+}
+/*void KsiazkaAdresowa::wyswietlWszystkichAdresatow()
+{
+    adresatMenedzer.wyswietlWszystkichAdresatow();
+}*/

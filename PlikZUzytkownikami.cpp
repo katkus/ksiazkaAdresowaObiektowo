@@ -1,13 +1,5 @@
 #include "PlikZUzytkownikami.h"
 
-/*PlikZUzytkownikami::PlikZUzytkownikami()
-{
-    nazwaPlikuZUzytkownikami = "Uzytkownicy.txt";
-    //daneJednegoUzytkownikaOddzielonePionowymiKreskami = "";
-    //string pojedynczaDanaUzytkownika = "";
-    //int numerPojedynczejDanejUzytkownika = 1;
-    //string liniaZDanymiUzytkownika = "";Co bedzie z calym konstruktorem??
-}*/
 void PlikZUzytkownikami::dopiszUzytkownikaDoPliku(Uzytkownik uzytkownik)
 {
     fstream plikTekstowy;
@@ -18,7 +10,7 @@ void PlikZUzytkownikami::dopiszUzytkownikaDoPliku(Uzytkownik uzytkownik)
     {
         liniaZDanymiUzytkownika = zamienDaneUzytkownikaNaLinieZDanymiOddzielonaPionowymiKreskami(uzytkownik);
 
-        if (czyPlikJestPusty() == true)
+        if (MetodyPomocnicze::czyPlikJestPusty(plikTekstowy) == true)
         {
             plikTekstowy << liniaZDanymiUzytkownika;
         }
@@ -32,15 +24,6 @@ void PlikZUzytkownikami::dopiszUzytkownikaDoPliku(Uzytkownik uzytkownik)
     plikTekstowy.close();
 }
 
-bool PlikZUzytkownikami::czyPlikJestPusty()
-{
-    fstream plikTekstowy;
-    plikTekstowy.seekg(0, ios::end);
-    if (plikTekstowy.tellg() == 0)
-        return true;
-    else
-        return false;
-}
 string PlikZUzytkownikami::zamienDaneUzytkownikaNaLinieZDanymiOddzielonaPionowymiKreskami(Uzytkownik uzytkownik)
 {
     string liniaZDanymiUzytkownika = "";
@@ -82,7 +65,6 @@ Uzytkownik PlikZUzytkownikami::pobierzDaneUzytkownika(string daneJednegoUzytkown
         if (daneJednegoUzytkownikaOddzielonePionowymiKreskami[pozycjaZnaku] != '|')
         {
             pojedynczaDanaUzytkownika += daneJednegoUzytkownikaOddzielonePionowymiKreskami[pozycjaZnaku];
-            cout<< pojedynczaDanaUzytkownika<<endl;
         }
         else
         {

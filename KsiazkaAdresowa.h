@@ -5,6 +5,7 @@
 #include <string>
 
 #include "UzytkownikMenedzer.h"
+#include "AdresatMenedzer.h"
 
 using namespace std;
 
@@ -12,23 +13,24 @@ class KsiazkaAdresowa
 {
     //int idOstatniegoAdresata;
    // int idUsunietegoAdresata;
+   int idZalogowanegoUzytkownika;
    UzytkownikMenedzer uzytkownikMenedzer;
    AdresatMenedzer adresatMenedzer;
    const string nazwaPlikuZUzytkownikami;
-   const string nazwaPlikuZAdresatami;
+   const string nazwaPlikuZUzytkownikam;
 
 public:
-    //string wczytajLinie();
     KsiazkaAdresowa(string nazwaPlikuZUzytkownikami, string nazwaPlikuZAdresatami) : uzytkownikMenedzer(nazwaPlikuZUzytkownikami), adresatMenedzer(nazwaPlikuZAdresatami)
     {
     uzytkownikMenedzer.wczytajUzytkownikowZPliku();
-    adresatMenedzer.wczytajAdresatowZPliku();
+//    adresatMenedzer.wczytajAdresatowZPliku(idZalogowanegoUzytkownika);
     };
     void rejestracjaUzytkownika();
     int logowanieUzytkownika();
     int wylogowanieUzytkownika();
     void zmianaHaslaZalogowanegoUzytkownika();
     void wypiszWszystkichUzytkownikow();
-    void wyswietlWszytskichAdresatow();
+    int dodajAdresata(int idZalogowanegoUzytkownika);
+    //void wyswietlWszystkichAdresatow();
 };
 #endif // KSIAZKAADRESOWA_
