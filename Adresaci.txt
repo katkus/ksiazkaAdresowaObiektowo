@@ -3,3 +3,6 @@
 1|11|Kasia|Kam|3333333|kasia@|Gdynia|
 3|11|Magda|Grym|4444444|magda@|Gdansk|
 5|11|Marcin|Kruk|6666666|marcin@|Szczecin|
+1|10|Nina|Popiel|6666666|nina@|Poznan|
+3|10|Kornelia|Klik|7777777|kornelia@|Szczytno|
+5|10|Emilia|Rozenek|9999999|emilia@|Warszawa|

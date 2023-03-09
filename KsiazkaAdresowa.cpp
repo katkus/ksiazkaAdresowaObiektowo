@@ -24,7 +24,7 @@ int KsiazkaAdresowa::dodajAdresata(int idZalogowanegoUzytkownika)
 {
     adresatMenedzer.dodajAdresata(idZalogowanegoUzytkownika);
 }
-/*void KsiazkaAdresowa::wyswietlWszystkichAdresatow()
+void KsiazkaAdresowa::wyswietlWszystkichAdresatow()
 {
     adresatMenedzer.wyswietlWszystkichAdresatow();
-}*/
+}
