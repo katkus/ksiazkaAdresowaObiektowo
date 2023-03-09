@@ -12,7 +12,7 @@ int main()
     ksiazkaAdresowa.dodajAdresata(idZalogowamegoUzytkownika);
     ksiazkaAdresowa.dodajAdresata(idZalogowamegoUzytkownika);
     ksiazkaAdresowa.dodajAdresata(idZalogowamegoUzytkownika);
-    //ksiazkaAdresowa.wyswietlWszystkichAdresatow();
+    ksiazkaAdresowa.wyswietlWszystkichAdresatow();
 //  ksiazkaAdresowa.rejestracjaUzytkownika();
     ksiazkaAdresowa.wypiszWszystkichUzytkownikow();
 

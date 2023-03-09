@@ -26,12 +26,11 @@ class AdresatMenedzer
     //Adresat podajDaneNowegoAdresata();
     //int pobierzIdNowegoUzytkownika();
     PlikZAdresatami plikZAdresatami;
-   // void wyswietlDaneAdresata(Adresat adresat);
+    void wyswietlDaneAdresata(Adresat adresat);
 
 public:
     AdresatMenedzer (string nazwaPlikuZAdresatami) : plikZAdresatami(nazwaPlikuZAdresatami)
     {
-    //    IdZalogowanegoUzytkownika = uzytkownik.pobierzId(uzytkownik);
 
     };
     int dodajAdresata(int idZalogowanegoUzytkownika);

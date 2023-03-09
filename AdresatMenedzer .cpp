@@ -48,7 +48,8 @@ cin.ignore();//??
 
     return adresat;
 }
-/*void AdresatMenedzer::wyswietlDaneAdresata(Adresat adresat)
+void AdresatMenedzer::wyswietlDaneAdresata(Adresat adresat)
+{
     cout << endl << "Id:                 " << adresat.pobierzId() << endl;
     cout << "Imie:               " << adresat.pobierzImie() << endl;
     cout << "Nazwisko:           " << adresat.pobierzNazwisko() << endl;
@@ -56,7 +57,7 @@ cin.ignore();//??
     cout << "Email:              " << adresat.pobierzEmail() << endl;
     cout << "Adres:              " << adresat.pobierzAdres() << endl;
 }
- /*void AdresatMenedzer::wyswietlWszystkichAdresatow()
+void AdresatMenedzer::wyswietlWszystkichAdresatow()
 {
     system("cls");
     if (!adresaci.empty())
@@ -74,7 +75,7 @@ cin.ignore();//??
         cout << endl << "Ksiazka adresowa jest pusta." << endl << endl;
     }
     system("read"); // Windows system("pause")
-}*/
+}
 /*int wczytajAdresatowZalogowanegoUzytkownikaZPliku(vector <Adresat> &adresaci, int idZalogowanegoUzytkownika)
 {
     Adresat adresat;

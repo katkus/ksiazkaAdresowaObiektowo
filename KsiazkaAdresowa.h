@@ -31,6 +31,6 @@ public:
     void zmianaHaslaZalogowanegoUzytkownika();
     void wypiszWszystkichUzytkownikow();
     int dodajAdresata(int idZalogowanegoUzytkownika);
-    //void wyswietlWszystkichAdresatow();
+    void wyswietlWszystkichAdresatow();
 };
 #endif // KSIAZKAADRESOWA_
