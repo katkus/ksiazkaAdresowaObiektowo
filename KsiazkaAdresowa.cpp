@@ -20,11 +20,15 @@ void KsiazkaAdresowa::wypiszWszystkichUzytkownikow()
 {
     uzytkownikMenedzer.wypiszWszystkichUzytkownikow();
 }
-int KsiazkaAdresowa::dodajAdresata(int idZalogowanegoUzytkownika)
+void KsiazkaAdresowa::dodajAdresata(int idZalogowanegoUzytkownik)
 {
-    adresatMenedzer.dodajAdresata(idZalogowanegoUzytkownika);
+    adresatMenedzer.dodajAdresata(idZalogowanegoUzytkownik);
 }
 void KsiazkaAdresowa::wyswietlWszystkichAdresatow()
 {
     adresatMenedzer.wyswietlWszystkichAdresatow();
+}
+void KsiazkaAdresowa::wczytajAdresatowZalogowanegoUzytkownikaZPliku(int idZalogowanegoUzytkownika)
+{
+    adresatMenedzer.wczytajAdresatowZalogowanegoUzytkownikaZPliku(idZalogowanegoUzytkownika);
 }

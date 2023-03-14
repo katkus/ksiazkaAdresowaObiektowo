@@ -19,23 +19,22 @@ class AdresatMenedzer
     int idOstatniegoAdresata;
     int idZalogowanegoUzytkownika;
     vector <Adresat> adresaci;
-    //Adresat adresat;
-    Uzytkownik uzytkownik;
     const string nazwaPlikuZAdresatami;
 
-    //Adresat podajDaneNowegoAdresata();
-    //int pobierzIdNowegoUzytkownika();
     PlikZAdresatami plikZAdresatami;
     void wyswietlDaneAdresata(Adresat adresat);
 
 public:
     AdresatMenedzer (string nazwaPlikuZAdresatami) : plikZAdresatami(nazwaPlikuZAdresatami)
     {
-
+        idOstatniegoAdresata = 0;
+        adresaci = plikZAdresatami.wczytajAdresatowZalogowanegoUzytkownikaZPliku(idZalogowanegoUzytkownika);
+        idOstatniegoAdresata = plikZAdresatami.wyszukajIdOstatniegoAdresata();
     };
-    int dodajAdresata(int idZalogowanegoUzytkownika);
+    void dodajAdresata(int idZalogowanegoUzytkownika);
     Adresat podajDaneNowegoAdresata(int idZalogowanegoUzytkownika);
     void wyswietlWszystkichAdresatow();
-    //void wczytajAdresatowZPliku();
+    void wczytajAdresatowZalogowanegoUzytkownikaZPliku(int idZalogowanegoUzytkownika);
 } ;
 #endif // ADRESATMENEDZER_H
+

@@ -11,26 +11,26 @@ using namespace std;
 
 class KsiazkaAdresowa
 {
-    //int idOstatniegoAdresata;
-   // int idUsunietegoAdresata;
    int idZalogowanegoUzytkownika;
    UzytkownikMenedzer uzytkownikMenedzer;
    AdresatMenedzer adresatMenedzer;
+
    const string nazwaPlikuZUzytkownikami;
-   const string nazwaPlikuZUzytkownikam;
+   const string nazwaPlikuZAdresatami;
 
 public:
     KsiazkaAdresowa(string nazwaPlikuZUzytkownikami, string nazwaPlikuZAdresatami) : uzytkownikMenedzer(nazwaPlikuZUzytkownikami), adresatMenedzer(nazwaPlikuZAdresatami)
     {
     uzytkownikMenedzer.wczytajUzytkownikowZPliku();
-//    adresatMenedzer.wczytajAdresatowZPliku(idZalogowanegoUzytkownika);
+    adresatMenedzer.wczytajAdresatowZalogowanegoUzytkownikaZPliku(idZalogowanegoUzytkownika);
     };
     void rejestracjaUzytkownika();
     int logowanieUzytkownika();
     int wylogowanieUzytkownika();
     void zmianaHaslaZalogowanegoUzytkownika();
     void wypiszWszystkichUzytkownikow();
-    int dodajAdresata(int idZalogowanegoUzytkownika);
+    void dodajAdresata(int idZalogowanegoUzytkownika);
     void wyswietlWszystkichAdresatow();
+    void wczytajAdresatowZalogowanegoUzytkownikaZPliku(int idZalogowanegoUzytkownika);
 };
 #endif // KSIAZKAADRESOWA_
