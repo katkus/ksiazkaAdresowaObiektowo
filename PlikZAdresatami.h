@@ -6,7 +6,6 @@
 #include <fstream>
 #include <cstdlib>
 #include <string>
-#include <algorithm>
 
 #include "Adresat.h"
 #include "MetodyPomocnicze.h"
@@ -16,17 +15,23 @@ using namespace std;
 class PlikZAdresatami
 {
    const string nazwaPlikuZAdresatami;
-   int idOstatniegoAdresat;
+   int idOstatniegoAdresata;
 
-   //bool czyPlikJestPusty();
    string zamienDaneAdresataNaLinieZDanymiOddzielonymiPionowymiKreskami(Adresat adresat);
-   //Adresat pobierzDaneAdresata(string daneJednegoAdresataOddzielonePionowymiKreskami);
+   int pobierzIdUzytkownikaZDanychOddzielonychPionowymiKreskami(string daneJednegoAdresataOddzielonePionowymiKreskami);
+   int pobierzIdAdresataZDanychOddzielonychPionowymiKreskami(string daneJednegoAdresataOddzielonePionowymiKreskami);
+   string pobierzLiczbe(string tekst, int pozycjaZnaku);
+   Adresat pobierzDaneAdresata(string AdresataOddzielonePionowymiKreskami);
 
 public:
-    PlikZAdresatami(string NAZWAPLIKUZADRESATAMI) : nazwaPlikuZAdresatami(NAZWAPLIKUZADRESATAMI) {};
-    string zamienPierwszaLitereNaDuzaAPozostaleNaMale(string tekst);
+    PlikZAdresatami(string NAZWAPLIKUZADRESATAMI) : nazwaPlikuZAdresatami(NAZWAPLIKUZADRESATAMI)
+    {
+        idOstatniegoAdresata=0;
+    };
     void dopiszAdresataDoPliku(Adresat adresat);
-    //vector <Adresat> wczytajAdresatowZalogowanegoUzytkownikaZPliku();
+    vector <Adresat> wczytajAdresatowZalogowanegoUzytkownikaZPliku(int idZalogowanegoUzytkownika);
+    int wyszukajIdOstatniegoAdresata();
+    void wczytajIdOstatniegoAdresata(int id);
 };
 #endif // PLIKZADRESATAMI_H
 
