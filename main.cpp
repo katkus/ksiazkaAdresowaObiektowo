@@ -8,14 +8,21 @@ int main()
 {
     KsiazkaAdresowa ksiazkaAdresowa ("Uzytkownicy.txt", "Adresaci.txt");
     ksiazkaAdresowa.wypiszWszystkichUzytkownikow();
-    int idZalogowanegoUzytkownika = ksiazkaAdresowa.logowanieUzytkownika();
-    ksiazkaAdresowa.wczytajAdresatowZalogowanegoUzytkownikaZPliku(idZalogowanegoUzytkownika);
+    ksiazkaAdresowa.rejestracjaUzytkownika();
+    ksiazkaAdresowa.rejestracjaUzytkownika();
+    ksiazkaAdresowa.logowanieUzytkownika();
     ksiazkaAdresowa.wyswietlWszystkichAdresatow();
-    ksiazkaAdresowa.dodajAdresata(idZalogowanegoUzytkownika);
-    ksiazkaAdresowa.dodajAdresata(idZalogowanegoUzytkownika);
+    ksiazkaAdresowa.dodajAdresata();
+    ksiazkaAdresowa.dodajAdresata();
     ksiazkaAdresowa.wyswietlWszystkichAdresatow();
-//  ksiazkaAdresowa.rejestracjaUzytkownika();
-    ksiazkaAdresowa.wypiszWszystkichUzytkownikow();
+    ksiazkaAdresowa.wylogowanieUzytkownika();
+
+    ksiazkaAdresowa.logowanieUzytkownika();
+    ksiazkaAdresowa.wyswietlWszystkichAdresatow();
+    ksiazkaAdresowa.dodajAdresata();
+    ksiazkaAdresowa.dodajAdresata();
+    ksiazkaAdresowa.wyswietlWszystkichAdresatow();
+    ksiazkaAdresowa.wylogowanieUzytkownika();
 
     return 0;
 }

@@ -38,11 +38,8 @@ void PlikZAdresatami::dopiszAdresataDoPliku(Adresat adresat)
         cout << "Nie udalo sie otworzyc pliku i zapisac w nim danych." << endl;
     }
     plikTekstowy.close();
+    ++idOstatniegoAdresata;
     system("read"); // Windows system("pause")
-}
-void PlikZAdresatami::wczytajIdOstatniegoAdresata(int id)
-{
-    idOstatniegoAdresata=id;
 }
 int PlikZAdresatami::wyszukajIdOstatniegoAdresata ()
 {
@@ -76,7 +73,7 @@ Adresat PlikZAdresatami::pobierzDaneAdresata(string daneAdresataOddzielonePionow
     string pojedynczaDanaAdresata = "";
     int numerPojedynczejDanejAdresata = 1;
 
-    for (int pozycjaZnaku = 0; pozycjaZnaku < daneAdresataOddzielonePionowymiKreskami.length(); pozycjaZnaku++)
+    for (unsigned int pozycjaZnaku = 0; pozycjaZnaku < daneAdresataOddzielonePionowymiKreskami.length(); pozycjaZnaku++)
     {
         if (daneAdresataOddzielonePionowymiKreskami[pozycjaZnaku] != '|')
         {
@@ -142,9 +139,6 @@ vector <Adresat> PlikZAdresatami::wczytajAdresatowZalogowanegoUzytkownikaZPliku(
     if (daneOstaniegoAdresataWPliku != "")
     {
         idOstatniegoAdresata = pobierzIdAdresataZDanychOddzielonychPionowymiKreskami(daneOstaniegoAdresataWPliku);
-        wczytajIdOstatniegoAdresata(idOstatniegoAdresata);
-
-        cout<<"idOstatniegoAdresata"<< idOstatniegoAdresata<<endl;
         return adresaci;
     }
     else

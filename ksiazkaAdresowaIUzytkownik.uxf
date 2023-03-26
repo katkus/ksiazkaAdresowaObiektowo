@@ -15,16 +15,14 @@
 -AdresatMenedzer : adresatMenedzer
 -nazwaPlikuZUzytkownikami : const String
 -nazwaPlikuZAdresatami : const String
--idZalogowanegoUzytkownika : Integer
 --
 +KsiazkaAdresowa()
 +rejestracjaUzytkownika(): void
-+logowanieUzytkownika(): Integer
-+wylogowanieUzytkownika: Integer
++logowanieUzytkownika(): void
++wylogowanieUzytkownika: void
 +wypiszWszystkichUzytkownikow(): void
 +wyswietlWszystkichAdresatow(): void
 +dodajAdresata(): Integer
-+wczytajAdresatowZalogowanegoUzytkownikaZPliku() : Integer
 
 
 
@@ -64,8 +62,8 @@
 --
 +UzytkownikMenedzer()
 +rejestracjaUzytkownika(): void
-+logowanieUzytkownika(): Integer
-+wylogowanieUzytkownika: Integer
++logowanieUzytkownika(): void
++wylogowanieUzytkownika: void
 +wypiszWszystkichUzytkownikow : void
 +wczytajUzytkownikowZPliku() : void
 -podajDaneNowegoUzytkownika() : vector &lt;Uzytkownik&gt;
@@ -119,7 +117,7 @@
       <x>10</x>
       <y>340</y>
       <w>460</w>
-      <h>240</h>
+      <h>270</h>
     </coordinates>
     <panel_attributes>AdresatMenedzer
 --
@@ -137,7 +135,7 @@
 +wczytajAdresatowZalogowanegoUzytkownikaZPliku(): Integer
 -pobierzDaneAdresata(): vector &lt;Adresat&gt;
 +wyswietlWszystkichAdresatow() : void
-</panel_attributes>
++setIdZalogowanegoUzytkownika() : void</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -165,7 +163,7 @@
       <x>680</x>
       <y>550</y>
       <w>590</w>
-      <h>200</h>
+      <h>260</h>
     </coordinates>
     <panel_attributes>PlikZAdresatami
 --
@@ -176,7 +174,6 @@
 +wczytajAdresatowZalogowanegoUzytkownikaZPliku(): vector &lt;Adresat&gt;
 +dopiszAdresataDoPliku(): void
 +wyszukajIdOstatniegoAdresata() : Integer
-+wczytajIdOstatniegoAdresata() : void
 -pobierzDaneAdresata(): vector &lt;Adresat&gt;
 -zamienDaneAdresataNaLinieZDanymiOddzielonymiPionowymiKreskami(): String
 -pobierzIdUzytkownikaZDanychOddzielonychPionowymiKreskami() : Integer

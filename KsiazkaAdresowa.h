@@ -11,7 +11,6 @@ using namespace std;
 
 class KsiazkaAdresowa
 {
-   int idZalogowanegoUzytkownika;
    UzytkownikMenedzer uzytkownikMenedzer;
    AdresatMenedzer adresatMenedzer;
 
@@ -21,16 +20,14 @@ class KsiazkaAdresowa
 public:
     KsiazkaAdresowa(string nazwaPlikuZUzytkownikami, string nazwaPlikuZAdresatami) : uzytkownikMenedzer(nazwaPlikuZUzytkownikami), adresatMenedzer(nazwaPlikuZAdresatami)
     {
-    uzytkownikMenedzer.wczytajUzytkownikowZPliku();
-    adresatMenedzer.wczytajAdresatowZalogowanegoUzytkownikaZPliku(idZalogowanegoUzytkownika);
+        uzytkownikMenedzer.wczytajUzytkownikowZPliku();
     };
     void rejestracjaUzytkownika();
     int logowanieUzytkownika();
-    int wylogowanieUzytkownika();
+    void wylogowanieUzytkownika();
     void zmianaHaslaZalogowanegoUzytkownika();
     void wypiszWszystkichUzytkownikow();
-    void dodajAdresata(int idZalogowanegoUzytkownika);
+    void dodajAdresata();
     void wyswietlWszystkichAdresatow();
-    void wczytajAdresatowZalogowanegoUzytkownikaZPliku(int idZalogowanegoUzytkownika);
 };
 #endif // KSIAZKAADRESOWA_
