@@ -16,5 +16,7 @@ public:
     static string wczytajLinie();
     static bool czyPlikJestPusty(fstream &plikTekstowy);
     static string zamienPierwszaLitereNaDuzaAPozostaleNaMale(string tekst);
+    static char wczytajZnak();
+    static int wczytajLiczbeCalkowita();
 };
 #endif // METODYPOMOCNICZE_H

@@ -14,7 +14,7 @@ string PlikZAdresatami::zamienDaneAdresataNaLinieZDanymiOddzielonymiPionowymiKre
 
     return liniaZDanymiAdresata;
 }
-void PlikZAdresatami::dopiszAdresataDoPliku(Adresat adresat)
+bool PlikZAdresatami::dopiszAdresataDoPliku(Adresat adresat)
 {
     string liniaZDanymiAdresata = "";
     fstream plikTekstowy;
@@ -32,16 +32,18 @@ void PlikZAdresatami::dopiszAdresataDoPliku(Adresat adresat)
         {
             plikTekstowy << endl << liniaZDanymiAdresata ;
         }
+            plikTekstowy.close();
+            idOstatniegoAdresata++;
+            system("read"); // Windows system("pause")
+            return true;
     }
     else
     {
         cout << "Nie udalo sie otworzyc pliku i zapisac w nim danych." << endl;
     }
-    plikTekstowy.close();
-    ++idOstatniegoAdresata;
-    system("read"); // Windows system("pause")
+    return false;
 }
-int PlikZAdresatami::wyszukajIdOstatniegoAdresata ()
+int PlikZAdresatami::pobierzIdOstatniegoAdresata ()
 {
     return idOstatniegoAdresata;
 }
@@ -139,11 +141,10 @@ vector <Adresat> PlikZAdresatami::wczytajAdresatowZalogowanegoUzytkownikaZPliku(
     if (daneOstaniegoAdresataWPliku != "")
     {
         idOstatniegoAdresata = pobierzIdAdresataZDanychOddzielonychPionowymiKreskami(daneOstaniegoAdresataWPliku);
-        return adresaci;
     }
-    else
-        return adresaci;
+    return adresaci;
 }
+
 
 
 
