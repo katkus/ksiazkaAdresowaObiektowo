@@ -4,7 +4,7 @@
 
 using namespace std;
 
-int main()
+int _main()
 {
     KsiazkaAdresowa ksiazkaAdresowa ("Uzytkownicy.txt", "Adresaci.txt");
 
@@ -42,21 +42,23 @@ int main()
             case '1':
                 ksiazkaAdresowa.dodajAdresata();
                 break;
-           /* case '2':
-                wyszukajAdresatowPoImieniu(adresaci);
+            case '2':
+                ksiazkaAdresowa.wyszukajAdresatowPoImieniu();
                 break;
             case '3':
-                wyszukajAdresatowPoNazwisku(adresaci);
-                break;*/
+                ksiazkaAdresowa.wyszukajAdresatowPoNazwisku();
+                break;
             case '4':
                 ksiazkaAdresowa.wyswietlWszystkichAdresatow();
                 break;
             /*case '5':
+                //ksiazkaAdresowa.usunAdresata();
                 idUsunietegoAdresata = usunAdresata(adresaci);
                 idOstatniegoAdresata = podajIdOstatniegoAdresataPoUsunieciuWybranegoAdresata(idUsunietegoAdresata, idOstatniegoAdresata);
                 break;
             case '6':
-                edytujAdresata(adresaci);
+                //ksiazkaAdresowa.wybierzOpcjeZMenuEdycja();
+                ksiazkaAdresowa.edytujAdresata();
                 break;*/
             case '7':
                 ksiazkaAdresowa.zmianaHaslaZalogowanegoUzytkownika();
@@ -67,6 +69,26 @@ int main()
             }
         }
     }
+        return 0;
+}
+
+//#include "KsiazkaAdresowa.h"
+#include "AdresatMenedzer.h""
+//#include "Adresat.h"
+//#include "PlikZAdresatami.h"
+
+    int main()
+{
+ //       PlikZAdresatami plikZAdresatami();
+        AdresatMenedzer adresatMenedzer("Adresaci-test.txt",1);
+
+        vector <Adresat> adresaci;
+//        AdresatMenedzer adresatMenedzer;
+
+//        adresaci = plikZAdresatami.wczytajAdresatowZalogowanegoUzytkownikaZPliku();
+        adresatMenedzer.wyszukajAdresatowPoImieniu();
+        adresatMenedzer.wyszukajAdresatowPoNazwisku();
+        adresatMenedzer.wyswietlWszystkichAdresatow();
 
     return 0;
 }

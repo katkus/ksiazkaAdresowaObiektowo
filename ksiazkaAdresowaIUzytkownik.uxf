@@ -146,7 +146,10 @@
 +dodajAdresata(): Integer
 +wczytajAdresatowZalogowanegoUzytkownikaZPliku(): Integer
 +wyswietlWszystkichAdresatow() : void
-+clearVectorAdresaci(): void</panel_attributes>
++clearVectorAdresaci(): void
++wyswietlIloscWyszukanychAdresatow(): void
++wyszukajAdresatowPoImieniu(): void
++void wyszukajAdresatowPoNazwisku(): void</panel_attributes>
     <additional_attributes/>
   </element>
   <element>

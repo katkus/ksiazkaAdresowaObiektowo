@@ -17,7 +17,6 @@ void KsiazkaAdresowa::wylogowanieUzytkownika()
     uzytkownikMenedzer.wylogowanieUzytkownika();
     delete adresatMenedzer;
     adresatMenedzer = NULL;
-    adresatMenedzer -> clearVectorAdresaci();
 }
 void KsiazkaAdresowa::zmianaHaslaZalogowanegoUzytkownika()
 {
@@ -39,13 +38,21 @@ void KsiazkaAdresowa::dodajAdresata()
         system("read"); // Windows system("pause")
     }
 }
+void KsiazkaAdresowa::wyszukajAdresatowPoImieniu()
+{
+    adresatMenedzer -> wyszukajAdresatowPoImieniu();
+}
+void KsiazkaAdresowa::wyszukajAdresatowPoNazwisku()
+{
+    adresatMenedzer -> wyszukajAdresatowPoNazwisku();
+}
 void KsiazkaAdresowa::wyswietlWszystkichAdresatow()
 {
     adresatMenedzer -> wyswietlWszystkichAdresatow();
 }
 bool KsiazkaAdresowa::czyUzytkownikJestZalogowany()
 {
-    uzytkownikMenedzer.czyUzytkownikJestZalogowany();
+    return uzytkownikMenedzer.czyUzytkownikJestZalogowany();
 }
 char KsiazkaAdresowa::wybierzOpcjeZMenuGlownego()
 {
