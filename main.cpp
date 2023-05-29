@@ -73,21 +73,23 @@ int _main()
 }
 
 //#include "KsiazkaAdresowa.h"
-#include "AdresatMenedzer.h""
+#include "AdresatMenedzer.h"
 //#include "Adresat.h"
 //#include "PlikZAdresatami.h"
 
     int main()
 {
  //       PlikZAdresatami plikZAdresatami();
-        AdresatMenedzer adresatMenedzer("Adresaci-test.txt",1);
+        AdresatMenedzer adresatMenedzer("AdresaciTest.txt",1);
 
         vector <Adresat> adresaci;
 //        AdresatMenedzer adresatMenedzer;
 
 //        adresaci = plikZAdresatami.wczytajAdresatowZalogowanegoUzytkownikaZPliku();
-        adresatMenedzer.wyszukajAdresatowPoImieniu();
-        adresatMenedzer.wyszukajAdresatowPoNazwisku();
+       // adresatMenedzer.wyszukajAdresatowPoImieniu();
+        //adresatMenedzer.wyszukajAdresatowPoNazwisku();
+        adresatMenedzer.wyswietlWszystkichAdresatow();
+        adresatMenedzer.usunAdresata();
         adresatMenedzer.wyswietlWszystkichAdresatow();
 
     return 0;

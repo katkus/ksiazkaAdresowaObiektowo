@@ -22,7 +22,10 @@
 +zmianaHaslaZalogowanegoUzytkownika: void
 +wypiszWszystkichUzytkownikow(): void
 +wyswietlWszystkichAdresatow(): void
-+dodajAdresata(): Integer
++wyszukajAdresatowPoImieniu(): void
++wyszukajAdresatowPoNazwisku(): void
++dodajAdresata(): void
++usunAdresata() : void
 +czyUzytkownikJestZalogowany() : bool
 +wybierzOpcjeZMenuGlownego() : Char
 +wybierzOpcjeZMenuUzytkownika(): Char
@@ -131,7 +134,7 @@
       <x>0</x>
       <y>340</y>
       <w>460</w>
-      <h>270</h>
+      <h>310</h>
     </coordinates>
     <panel_attributes>AdresatMenedzer
 --
@@ -149,7 +152,9 @@
 +clearVectorAdresaci(): void
 +wyswietlIloscWyszukanychAdresatow(): void
 +wyszukajAdresatowPoImieniu(): void
-+void wyszukajAdresatowPoNazwisku(): void</panel_attributes>
++void wyszukajAdresatowPoNazwisku(): void
++int podajIdWybranegoAdresata(): Integer
++usunAdresata() : void</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -198,6 +203,7 @@
     <panel_attributes>PlikZAdresatami
 --
 -NAZWA_PLIKU_Z_ADRESATAMI : String
+-NAZWA_TYMCZASOWEGO_PLIKU_Z_ADRESATAMI : String
 -idOstatniegoAdresata : Integer
 --
 +PlikZAdresatami()
@@ -208,7 +214,11 @@
 -zamienDaneAdresataNaLinieZDanymiOddzielonymiPionowymiKreskami(): String
 -pobierzIdUzytkownikaZDanychOddzielonychPionowymiKreskami() : Integer
 -pobierzIdAdresataZDanychOddzielonychPionowymiKreskami() : Integer
--pobierzLiczbe() : String</panel_attributes>
+-pobierzLiczbe() : String
++zwrocNumerLiniiSzukanegoAdresata(): Integer
++usunPlik(): void
++zmienNazwePliku(): void
++usunWybranaLinieWPliku(): void</panel_attributes>
     <additional_attributes/>
   </element>
 </diagram>

@@ -50,6 +50,14 @@ void KsiazkaAdresowa::wyswietlWszystkichAdresatow()
 {
     adresatMenedzer -> wyswietlWszystkichAdresatow();
 }
+void KsiazkaAdresowa::usunAdresata()
+{
+    adresatMenedzer -> usunAdresata();
+}
+/*void KsiazkaAdresowa::wyswietlWszystkichAdresatow()
+{
+    adresatMenedzer -> wyswietlWszystkichAdresatow();
+}*/
 bool KsiazkaAdresowa::czyUzytkownikJestZalogowany()
 {
     return uzytkownikMenedzer.czyUzytkownikJestZalogowany();

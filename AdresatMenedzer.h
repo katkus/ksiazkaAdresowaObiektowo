@@ -22,8 +22,8 @@ class AdresatMenedzer
 
 
 public:
-    AdresatMenedzer (string nazwaPlikuZAdresatami, int idZalogowanegoUzytkownika)
-    : ID_ZALOGOWANEGO_UZYTKOWNIKA(idZalogowanegoUzytkownika), plikZAdresatami(nazwaPlikuZAdresatami)
+    AdresatMenedzer (string nazwaPlikuZAdresatami, int idZalogowanegoUzytkownika) //string nazwaTymczasowegoPlikuZAdresatami)
+    : ID_ZALOGOWANEGO_UZYTKOWNIKA(idZalogowanegoUzytkownika), plikZAdresatami(nazwaPlikuZAdresatami) //plikZAdresatami(nazwaTymczasowegoPlikuZAdresatami)//tymczasowyPlikZAdresatami
     {
         adresaci = plikZAdresatami.wczytajAdresatowZalogowanegoUzytkownikaZPliku(ID_ZALOGOWANEGO_UZYTKOWNIKA);
     };
@@ -32,6 +32,9 @@ public:
     void wyswietlIloscWyszukanychAdresatow(int iloscAdresatow);
     void wyszukajAdresatowPoImieniu();
     void wyszukajAdresatowPoNazwisku();
+    int podajIdWybranegoAdresata();
+    void usunAdresata();
+    //void edytujAdresata();//
 } ;
 #endif // ADRESATMENEDZER_H
 
