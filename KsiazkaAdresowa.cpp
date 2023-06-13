@@ -54,10 +54,10 @@ void KsiazkaAdresowa::usunAdresata()
 {
     adresatMenedzer -> usunAdresata();
 }
-/*void KsiazkaAdresowa::wyswietlWszystkichAdresatow()
+void KsiazkaAdresowa::edytujAdresata()
 {
-    adresatMenedzer -> wyswietlWszystkichAdresatow();
-}*/
+    adresatMenedzer -> edytujAdresata();
+}
 bool KsiazkaAdresowa::czyUzytkownikJestZalogowany()
 {
     return uzytkownikMenedzer.czyUzytkownikJestZalogowany();
@@ -101,7 +101,7 @@ char KsiazkaAdresowa::wybierzOpcjeZMenuUzytkownika()
     return wybor;
 }
 
-char KsiazkaAdresowa::wybierzOpcjeZMenuEdycja()
+/*char KsiazkaAdresowa::wybierzOpcjeZMenuEdycja()
 {
     char wybor;
 
@@ -118,4 +118,4 @@ char KsiazkaAdresowa::wybierzOpcjeZMenuEdycja()
     wybor = MetodyPomocnicze::wczytajZnak();
 
     return wybor;
-}
+}*/

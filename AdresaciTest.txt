@@ -2,5 +2,5 @@
 2|1|Kamil|Bryk|1211133|kamil@|Gdansk|
 3|12|Ela|Ksiezna|9998777|ela@|Wroslaw|
 4|1|Grzes|Krzys|9871234|grzes@|Pyrzyce|
-5|1|Marek|Ziem|3334455|marek@|Krakow|
+5|1|Arek|Ziem|3334455|arek@|Lodz|
 6|1|Marek|Ziem|3334455|marek@|Krakow|

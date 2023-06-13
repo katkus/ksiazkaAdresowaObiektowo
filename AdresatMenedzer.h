@@ -34,7 +34,8 @@ public:
     void wyszukajAdresatowPoNazwisku();
     int podajIdWybranegoAdresata();
     void usunAdresata();
-    //void edytujAdresata();//
+    char wybierzOpcjeZMenuEdycja();
+    void edytujAdresata();
 } ;
 #endif // ADRESATMENEDZER_H
 

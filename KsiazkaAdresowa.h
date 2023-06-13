@@ -38,10 +38,10 @@ public:
     void wyszukajAdresatowPoImieniu();
     void wyszukajAdresatowPoNazwisku();
     void usunAdresata();
-    //void edytujAdresata();//
+    void edytujAdresata();
     bool czyUzytkownikJestZalogowany();
     char wybierzOpcjeZMenuGlownego();
     char wybierzOpcjeZMenuUzytkownika();
-    char wybierzOpcjeZMenuEdycja();
+    //char wybierzOpcjeZMenuEdycja();
 };
 #endif // KSIAZKAADRESOWA_

@@ -89,7 +89,7 @@ int _main()
        // adresatMenedzer.wyszukajAdresatowPoImieniu();
         //adresatMenedzer.wyszukajAdresatowPoNazwisku();
         adresatMenedzer.wyswietlWszystkichAdresatow();
-        adresatMenedzer.usunAdresata();
+        adresatMenedzer.edytujAdresata();
         adresatMenedzer.wyswietlWszystkichAdresatow();
 
     return 0;
