@@ -9,13 +9,12 @@
 
 #include "Adresat.h"
 #include "MetodyPomocnicze.h"
+#include "PlikTekstowy.h"
 
 using namespace std;
 
-class PlikZAdresatami
+class PlikZAdresatami : public PlikTekstowy
 {
-   const string NAZWA_PLIKU_Z_ADRESATAMI;
-   const string NAZWA_TYMCZASOWEGO_PLIKU_Z_ADRESATAMI;
    int idOstatniegoAdresata;
    int idUsuwanegoAdresata;
 
@@ -27,7 +26,7 @@ class PlikZAdresatami
 
 
 public:
-    PlikZAdresatami(string nazwaPlikuZAdresatami) : NAZWA_PLIKU_Z_ADRESATAMI (nazwaPlikuZAdresatami)//, NAZWA_TYMCZASOWEGO_PLIKU_Z_ADRESATAMI (nazwaTymczasowegoPlikuZAdresatami)
+    PlikZAdresatami(string nazwaPlikuZAdresatami) : PlikTekstowy(nazwaPlikuZAdresatami)
     {
         idOstatniegoAdresata=0;
         idUsuwanegoAdresata=0;
@@ -38,7 +37,6 @@ public:
     void usunPlik(string nazwaPlikuZRozszerzeniem);
     void zmienNazwePliku(string staraNazwa, string nowaNazwa);
     void usunWybranaLinieWPliku(int idUsuwanegoAdresata);
-//    int zwrocNumerLiniiSzukanegoAdresata(int idAdresata)
     int pobierzZPlikuIdOstatniegoAdresata();
     int podajIdOstatniegoAdresataPoUsunieciuWybranegoAdresata(int idUsuwanegoAdresata, int idOstatniegoAdresata);
     void edytujWybranaLinieWPliku(int idEdytowanegoAdresata, string liniaZDanymiAdresataOddzielonePionowymiKreskami);

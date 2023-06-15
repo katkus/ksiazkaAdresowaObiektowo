@@ -22,8 +22,8 @@ class AdresatMenedzer
 
 
 public:
-    AdresatMenedzer (string nazwaPlikuZAdresatami, int idZalogowanegoUzytkownika) //string nazwaTymczasowegoPlikuZAdresatami)
-    : ID_ZALOGOWANEGO_UZYTKOWNIKA(idZalogowanegoUzytkownika), plikZAdresatami(nazwaPlikuZAdresatami) //plikZAdresatami(nazwaTymczasowegoPlikuZAdresatami)//tymczasowyPlikZAdresatami
+    AdresatMenedzer (string nazwaPlikuZAdresatami, int idZalogowanegoUzytkownika)
+    : ID_ZALOGOWANEGO_UZYTKOWNIKA(idZalogowanegoUzytkownika), plikZAdresatami(nazwaPlikuZAdresatami)
     {
         adresaci = plikZAdresatami.wczytajAdresatowZalogowanegoUzytkownikaZPliku(ID_ZALOGOWANEGO_UZYTKOWNIKA);
     };

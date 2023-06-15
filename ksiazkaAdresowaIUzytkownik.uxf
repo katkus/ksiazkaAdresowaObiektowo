@@ -226,4 +226,20 @@
 +??zaktualizujDaneWybranegoAdresata: void</panel_attributes>
     <additional_attributes/>
   </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>810</y>
+      <w>460</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>PlikTekstowy
+--
+- NAZWA_PLIKU : String
+--
++pobierzNazwePliku() : String
++czyPlikJestPusty(): String</panel_attributes>
+    <additional_attributes/>
+  </element>
 </diagram>

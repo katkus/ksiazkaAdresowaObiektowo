@@ -160,7 +160,6 @@ int AdresatMenedzer::podajIdWybranegoAdresata()
 void AdresatMenedzer::usunAdresata()
 {
     int idUsuwanegoAdresata = 0;
-    //int numerLiniiUsuwanegoAdresata = 0;
     system("clear");//Windows system("cls")
     cout << ">>> USUWANIE WYBRANEGO ADRESATA <<<" << endl << endl;
     idUsuwanegoAdresata = podajIdWybranegoAdresata();
@@ -181,13 +180,12 @@ void AdresatMenedzer::usunAdresata()
                 adresaci.erase(itr);
                 cout << endl << endl << "Szukany adresat zostal USUNIETY" << endl << endl;
                 system("read"); // Windows system("pause")
-                //return idUsuwanegoAdresata;
+                plikZAdresatami.podajIdOstatniegoAdresataPoUsunieciuWybranegoAdresata( idUsuwanegoAdresata, plikZAdresatami.pobierzIdOstatniegoAdresata());
             }
             else
             {
                 cout << endl << endl << "Wybrany adresat NIE zostal usuniety" << endl << endl;
                 system("read"); // Windows system("pause")
-               // return 0;
             }
         }
     }
@@ -196,7 +194,6 @@ void AdresatMenedzer::usunAdresata()
         cout << endl << "Nie ma takiego adresata w ksiazce adresowej" << endl << endl;
         system("read"); // Windows system("pause")
     }
-//    return 0;
 }
 
 char AdresatMenedzer::wybierzOpcjeZMenuEdycja()
@@ -223,7 +220,6 @@ void AdresatMenedzer::edytujAdresata()
     system("clear");//Windows system("cls")
     Adresat adresat;
     int idEdytowanegoAdresata = 0;
-    int numerLiniiEdytowanegoAdresata = 0;
     string liniaZDanymiAdresata = "";
 
     cout << ">>> EDYCJA WYBRANEGO ADRESATA <<<" << endl << endl;

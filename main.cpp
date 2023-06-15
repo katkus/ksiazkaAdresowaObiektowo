@@ -4,7 +4,7 @@
 
 using namespace std;
 
-int _main()
+int main()
 {
     KsiazkaAdresowa ksiazkaAdresowa ("Uzytkownicy.txt", "Adresaci.txt");
 
@@ -51,15 +51,12 @@ int _main()
             case '4':
                 ksiazkaAdresowa.wyswietlWszystkichAdresatow();
                 break;
-            /*case '5':
-                //ksiazkaAdresowa.usunAdresata();
-                idUsunietegoAdresata = usunAdresata(adresaci);
-                idOstatniegoAdresata = podajIdOstatniegoAdresataPoUsunieciuWybranegoAdresata(idUsunietegoAdresata, idOstatniegoAdresata);
+            case '5':
+                ksiazkaAdresowa.usunAdresata();
                 break;
             case '6':
-                //ksiazkaAdresowa.wybierzOpcjeZMenuEdycja();
                 ksiazkaAdresowa.edytujAdresata();
-                break;*/
+                break;
             case '7':
                 ksiazkaAdresowa.zmianaHaslaZalogowanegoUzytkownika();
                 break;
@@ -77,7 +74,7 @@ int _main()
 //#include "Adresat.h"
 //#include "PlikZAdresatami.h"
 
-    int main()
+    int _main()
 {
  //       PlikZAdresatami plikZAdresatami();
         AdresatMenedzer adresatMenedzer("AdresaciTest.txt",1);
@@ -89,7 +86,8 @@ int _main()
        // adresatMenedzer.wyszukajAdresatowPoImieniu();
         //adresatMenedzer.wyszukajAdresatowPoNazwisku();
         adresatMenedzer.wyswietlWszystkichAdresatow();
-        adresatMenedzer.edytujAdresata();
+        //adresatMenedzer.edytujAdresata();
+        adresatMenedzer.usunAdresata();
         adresatMenedzer.wyswietlWszystkichAdresatow();
 
     return 0;
