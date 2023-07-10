@@ -10,7 +10,7 @@ void AdresatMenedzer::dodajAdresata()
 
     adresaci.push_back(adresat);
     if(plikZAdresatami.dopiszAdresataDoPliku(adresat))
-        cout << "Nowy adresat został dodany." << endl;
+        cout << "Nowy adresat zostal dodany." << endl;
     else
         cout << "Blad. Nie udalo sie dodac nowego adresata do pliku." << endl;
     system("read"); // Windows system("pause")
@@ -180,7 +180,7 @@ void AdresatMenedzer::usunAdresata()
                 adresaci.erase(itr);
                 cout << endl << endl << "Szukany adresat zostal USUNIETY" << endl << endl;
                 system("read"); // Windows system("pause")
-                plikZAdresatami.podajIdOstatniegoAdresataPoUsunieciuWybranegoAdresata( idUsuwanegoAdresata, plikZAdresatami.pobierzIdOstatniegoAdresata());
+                return;
             }
             else
             {

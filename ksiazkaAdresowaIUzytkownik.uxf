@@ -29,7 +29,6 @@
 +czyUzytkownikJestZalogowany() : bool
 +wybierzOpcjeZMenuGlownego() : Char
 +wybierzOpcjeZMenuUzytkownika(): Char
-//+wybierzOpcjeZMenuEdycja(): Char
 
 
 
@@ -90,14 +89,14 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>770</x>
-      <y>330</y>
+      <x>740</x>
+      <y>360</y>
       <w>590</w>
       <h>160</h>
     </coordinates>
     <panel_attributes>PlikZUzytkownikami
 --
--NAZWA_PLIKU_Z_UZYTKOWNIKAMI : String
+-nazwaPlikuZUzytkownikami : String
 --
 +PlikZUyztkownikami()
 +dopiszUzytkownikaDoPliku() : void
@@ -114,7 +113,7 @@
       <x>780</x>
       <y>190</y>
       <w>440</w>
-      <h>130</h>
+      <h>160</h>
     </coordinates>
     <panel_attributes>MetodyPomocnicze
 --
@@ -122,9 +121,9 @@
 +konwerjsaIntNaString() : String
 +konwerjsaStringIntNa() : String
 +wczytajLinie() : String
-+czyPlikJestPusty() : Bool
 +zamienPierwszaLitereNaDuzaAPozostaleNaMale : String
-+wczytajZnak(): char
++wczytajZnak(): Char
++pobierzLiczbe() : String
 +wczytajLiczbeCalkowita(): Integer</panel_attributes>
     <additional_attributes/>
   </element>
@@ -149,7 +148,6 @@
 +dodajAdresata(): Integer
 +wczytajAdresatowZalogowanegoUzytkownikaZPliku(): Integer
 +wyswietlWszystkichAdresatow() : void
-+clearVectorAdresaci(): void
 +wyswietlIloscWyszukanychAdresatow(): void
 +wyszukajAdresatowPoImieniu(): void
 +void wyszukajAdresatowPoNazwisku(): void
@@ -197,15 +195,15 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>750</x>
-      <y>500</y>
+      <x>740</x>
+      <y>530</y>
       <w>590</w>
       <h>360</h>
     </coordinates>
     <panel_attributes>PlikZAdresatami
 --
--NAZWA_PLIKU_Z_ADRESATAMI : String
 -idOstatniegoAdresata : Integer
+-nazwaPlikuZAdresatami : String
 --
 +PlikZAdresatami()
 +wczytajAdresatowZalogowanegoUzytkownikaZPliku(): vector &lt;Adresat&gt;
@@ -215,15 +213,11 @@
 -zamienDaneAdresataNaLinieZDanymiOddzielonymiPionowymiKreskami(): String
 -pobierzIdUzytkownikaZDanychOddzielonychPionowymiKreskami() : Integer
 -pobierzIdAdresataZDanychOddzielonychPionowymiKreskami() : Integer
--pobierzLiczbe() : String
 +usunPlik(): void
 +zmienNazwePliku(): void
 +usunWybranaLinieWPliku(): void
-+pobierzZPlikuIdOstatniegoAdresata(): Integer
-+podajIdOstatniegoAdresataPoUsunieciuWybranegoAdresata(): void
-+??int zwrocNumerLiniiSzukanegoAdresata: Integer
-+??edytujWybranaLinieWPliku: void
-+??zaktualizujDaneWybranegoAdresata: void</panel_attributes>
++edytujWybranaLinieWPliku: void
++zaktualizujDaneWybranegoAdresata: void</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -232,7 +226,7 @@
       <x>0</x>
       <y>810</y>
       <w>460</w>
-      <h>60</h>
+      <h>90</h>
     </coordinates>
     <panel_attributes>PlikTekstowy
 --

@@ -29,7 +29,7 @@ int main()
                 break;
             default:
                 cout << endl << "Nie ma takiej opcji w menu." << endl << endl;
-                system("pause");
+                system("read"); // Windows system("pause")
                 break;
             }
         }
