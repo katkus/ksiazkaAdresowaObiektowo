@@ -1,33 +1,35 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="13.3">
-  <zoom_level>10</zoom_level>
+  <zoom_level>6</zoom_level>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>10</x>
-      <y>0</y>
-      <w>330</w>
-      <h>380</h>
+      <x>504</x>
+      <y>606</y>
+      <w>210</w>
+      <h>216</h>
     </coordinates>
     <panel_attributes>KsiazkaAdresowa
 --
--UzytkownikMenedzer : uzytkownikMenedzer
--AdresatMenedzer : adresatMenedzer
--NAZWA_PLIKU_Z_ADRESATAMI : String
+-UzytkownikMenedzer: uzytkownikMenedzer
+-AdresatMenedzer: adresatMenedzer
+-NAZWA_PLIKU_Z_ADRESATAMI: String
 --
 +KsiazkaAdresowa()
++~KsiazkaAdresowa()
 +rejestracjaUzytkownika(): void
 +logowanieUzytkownika(): void
-+wylogowanieUzytkownika: void
-+zmianaHaslaZalogowanegoUzytkownika: void
++wylogowanieUzytkownika(): void
++zmianaHaslaZalogowanegoUzytkownika(): void
 +wypiszWszystkichUzytkownikow(): void
++dodajAdresata(): void
 +wyswietlWszystkichAdresatow(): void
 +wyszukajAdresatowPoImieniu(): void
 +wyszukajAdresatowPoNazwisku(): void
-+dodajAdresata(): void
-+usunAdresata() : void
-+czyUzytkownikJestZalogowany() : bool
-+wybierzOpcjeZMenuGlownego() : Char
++usunAdresata(): void
++edytujAdresata(): void
++czyUzytkownikJestZalogowany(): bool
++wybierzOpcjeZMenuGlownego(): Char
 +wybierzOpcjeZMenuUzytkownika(): Char
 
 
@@ -38,202 +40,362 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>780</x>
-      <y>0</y>
-      <w>320</w>
-      <h>180</h>
+      <x>180</x>
+      <y>336</y>
+      <w>192</w>
+      <h>108</h>
     </coordinates>
     <panel_attributes>Uzytkownik
 --
--id : Integer
--login : String
--haslo : String
+-id: Integer
+-login: String
+-haslo: String
 --
-+ustawId : void
-+ustawLogin : void
-+ustawHaslo : void
-+pobierzId : Integer
-+pobierzLogin : String
-+pobierzHaslo : String</panel_attributes>
++ustawId(): void
++ustawLogin(): void
++ustawHaslo(): void
++pobierzId(): Integer
++pobierzLogin(): String
++pobierzHaslo(): String</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>350</x>
-      <y>0</y>
-      <w>420</w>
-      <h>320</h>
+      <x>78</x>
+      <y>582</y>
+      <w>252</w>
+      <h>192</h>
     </coordinates>
     <panel_attributes>UzytkownikMenedzer
 --
--idZalogowanegoUzytkownika : Integer
--uzytkownicy : vector &lt;Uzytkownik&gt;
--plikZUzytkownikami : PlikZUzytkownikami
--nazwaPlikuZUzytkownikami : const string
+-idZalogowanegoUzytkownika: Integer
+-uzytkownicy: vector &lt;Uzytkownik&gt;
+-plikZUzytkownikami: PlikZUzytkownikami
 --
+-podajDaneNowegoUzytkownika() : Uzytkownik
+-pobierzIdNowegoUzytkownika() : Integer
+-czyIstniejeLogin() : bool
 +UzytkownikMenedzer()
 +rejestracjaUzytkownika(): void
 +logowanieUzytkownika(): void
 +wylogowanieUzytkownika: void
-+wypiszWszystkichUzytkownikow : void
--podajDaneNowegoUzytkownika() : vector &lt;Uzytkownik&gt;
--pobierzIdNowegoUzytkownika() : Integer
--czyIstniejeLogin() : bool
 +zmianaHaslaZalogowanegoUzytkownika(): void
++wypiszWszystkichUzytkownikow : void
 +czyUzytkownikJestZalogowany(): bool
-+pobierzIdZalogowanegoUzytkownika(): Integer
-+czyUzytkownikJestZalogowany() : bool</panel_attributes>
++pobierzIdZalogowanegoUzytkownika(): Integer</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>740</x>
-      <y>360</y>
-      <w>590</w>
-      <h>160</h>
+      <x>66</x>
+      <y>144</y>
+      <w>354</w>
+      <h>96</h>
     </coordinates>
     <panel_attributes>PlikZUzytkownikami
 --
--nazwaPlikuZUzytkownikami : String
 --
+-zamienDaneUzytkownikaNaLinieZDanymiOddzielonaPionowymiKreskami(): String
+-pobierzDaneUzytkownika(): Uzytkownik
 +PlikZUyztkownikami()
-+dopiszUzytkownikaDoPliku() : void
--pobierzDaneUzytkownika : vector &lt;Uzytkownik&gt;
-+wczytajUzytkownikowZPliku() : vector &lt;Uzytkownik&gt;
--zamienDaneUzytkownikaNaLinieZDanymiOddzielonaPionowymiKreskami() : String
-+zapiszWszystkichUzytkownikowDoPliku() : void
++dopiszUzytkownikaDoPliku(): void
++wczytajUzytkownikowZPliku(): vector &lt;Uzytkownik&gt;
++zapiszWszystkichUzytkownikowDoPliku(): void
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>780</x>
-      <y>190</y>
-      <w>440</w>
-      <h>160</h>
+      <x>486</x>
+      <y>318</y>
+      <w>264</w>
+      <h>96</h>
     </coordinates>
     <panel_attributes>MetodyPomocnicze
 --
 --
-+konwerjsaIntNaString() : String
-+konwerjsaStringIntNa() : String
-+wczytajLinie() : String
-+zamienPierwszaLitereNaDuzaAPozostaleNaMale : String
-+wczytajZnak(): Char
-+pobierzLiczbe() : String
-+wczytajLiczbeCalkowita(): Integer</panel_attributes>
+_+konwerjsaIntNaString(): String_
+_+konwerjsaStringIntNa(): Integer_
+_+wczytajLinie(): String_
+_+zamienPierwszaLitereNaDuzaAPozostaleNaMale(): String_
+_+wczytajZnak(): Char_
+_+pobierzLiczbe(): String_
+_+wczytajLiczbeCalkowita(): Integer_</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>0</x>
-      <y>400</y>
-      <w>460</w>
-      <h>400</h>
+      <x>864</x>
+      <y>636</y>
+      <w>276</w>
+      <h>174</h>
     </coordinates>
     <panel_attributes>AdresatMenedzer
 --
--ID_ZALOGOWANEGO_UZYTKOWNIKA : Integer
--adresaci : vector &lt;Adresat&gt;
--plikZAdresatami : PlikZAdresatami
+-ID_ZALOGOWANEGO_UZYTKOWNIKA: Integer
+-adresaci: vector &lt;Adresat&gt;
+-plikZAdresatami: PlikZAdresatami
 --
+-podajDaneNowegoAdresata(): Adresat
+-wyswietlDaneAdresata(): void
 +AdresatMenedzer()
++dodajAdresata(): void
 +wyswietlWszystkichAdresatow(): void
--wyswietlDaneAdresata() : void
--podajDaneNowegoAdresata(): vector &lt;Adresat&gt;
-+dodajAdresata(): Integer
-+wczytajAdresatowZalogowanegoUzytkownikaZPliku(): Integer
-+wyswietlWszystkichAdresatow() : void
 +wyswietlIloscWyszukanychAdresatow(): void
 +wyszukajAdresatowPoImieniu(): void
-+void wyszukajAdresatowPoNazwisku(): void
-+int podajIdWybranegoAdresata(): Integer
-+usunAdresata() : void
-+edytujAdresata() : void
-+wybierzOpcjeZMenuEdycja(): Char</panel_attributes>
++wyszukajAdresatowPoNazwisku(): void
++podajIdWybranegoAdresata(): Integer
++usunAdresata(): void
++wybierzOpcjeZMenuEdycja(): Char
++edytujAdresata(): void</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>470</x>
-      <y>400</y>
-      <w>260</w>
-      <h>400</h>
+      <x>876</x>
+      <y>282</y>
+      <w>156</w>
+      <h>240</h>
     </coordinates>
     <panel_attributes>Adresat
 --
--id : Integer
--idUzytkownika : Integer
--imie : String
--nazwisko : String
--numerTelefonu : String
--email : String
--adres : String
+-id: Integer
+-idUzytkownika: Integer
+-imie: String
+-nazwisko: String
+-numerTelefonu: String
+-email: String
+-adres: String
 --
 +Adresat()
-+ustawId : void
-+ustawIdUzytkownika : void
-+ustawImie : void
-+ustawNazwisko : void
-+ustawNumerTelefonu : void
-+ustawEmail : void
-+ustawAdres : void
-+pobierzId : Integer
-+pobierzIdUzytkownika : Integer
-+pobierzImie : String
-+pobierzNazwisko : String
-+pobierzNumerTelefonu : String
-+pobierzEmail : String
-+pobierzAdres : String</panel_attributes>
++ustawId(): void
++ustawIdUzytkownika(): void
++ustawImie(): void
++ustawNazwisko(): void
++ustawNumerTelefonu(): void
++ustawEmail(): void
++ustawAdres(): void
++pobierzId(): Integer
++pobierzIdUzytkownika(): Integer
++pobierzImie(): String
++pobierzNazwisko(): String
++pobierzNumerTelefonu(): String
++pobierzEmail(): String
++pobierzAdres(): String</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>740</x>
-      <y>530</y>
-      <w>590</w>
-      <h>360</h>
+      <x>852</x>
+      <y>66</y>
+      <w>354</w>
+      <h>174</h>
     </coordinates>
     <panel_attributes>PlikZAdresatami
 --
--idOstatniegoAdresata : Integer
--nazwaPlikuZAdresatami : String
+-idOstatniegoAdresata: Integer
 --
-+PlikZAdresatami()
-+wczytajAdresatowZalogowanegoUzytkownikaZPliku(): vector &lt;Adresat&gt;
-+dopiszAdresataDoPliku(): void
-+pobierzIdOstatniegoAdresata() : Integer
--pobierzDaneAdresata(): vector &lt;Adresat&gt;
 -zamienDaneAdresataNaLinieZDanymiOddzielonymiPionowymiKreskami(): String
--pobierzIdUzytkownikaZDanychOddzielonychPionowymiKreskami() : Integer
--pobierzIdAdresataZDanychOddzielonychPionowymiKreskami() : Integer
-+usunPlik(): void
-+zmienNazwePliku(): void
+-pobierzIdUzytkownikaZDanychOddzielonychPionowymiKreskami(): Integer
+-pobierzIdAdresataZDanychOddzielonychPionowymiKreskami(): Integer
+-pobierzDaneAdresata(): Adresat
+-usunPlik(): void
+-zmienNazwePliku(): void
+-edytujWybranaLinieWPliku(): void
++PlikZAdresatami()
++dopiszAdresataDoPliku(): bool
++wczytajAdresatowZalogowanegoUzytkownikaZPliku(): vector &lt;Adresat&gt;
++pobierzIdOstatniegoAdresata(): Integer
 +usunWybranaLinieWPliku(): void
-+edytujWybranaLinieWPliku: void
-+zaktualizujDaneWybranegoAdresata: void</panel_attributes>
++zaktualizujDaneWybranegoAdresata(): void</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>0</x>
-      <y>810</y>
-      <w>460</w>
-      <h>90</h>
+      <x>510</x>
+      <y>60</y>
+      <w>258</w>
+      <h>66</h>
     </coordinates>
     <panel_attributes>PlikTekstowy
 --
-- NAZWA_PLIKU : String
+- NAZWA_PLIKU: String
 --
++PlikTekstowy()
 +pobierzNazwePliku() : String
-+czyPlikJestPusty(): String</panel_attributes>
+_+czyPlikJestPusty(): bool_</panel_attributes>
     <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>762</x>
+      <y>84</y>
+      <w>102</w>
+      <h>18</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;150.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>414</x>
+      <y>90</y>
+      <w>108</w>
+      <h>114</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>160.0;10.0;10.0;170.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>324</x>
+      <y>408</y>
+      <w>174</w>
+      <h>186</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;290.0;270.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>570</x>
+      <y>408</y>
+      <w>18</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;330.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>744</x>
+      <y>408</y>
+      <w>132</w>
+      <h>240</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>200.0;380.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>414</x>
+      <y>228</y>
+      <w>90</w>
+      <h>102</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;130.0;150.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>744</x>
+      <y>234</y>
+      <w>120</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>180.0;10.0;10.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>198</x>
+      <y>438</y>
+      <w>18</w>
+      <h>156</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;240.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>954</x>
+      <y>516</y>
+      <w>18</w>
+      <h>132</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;200.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>324</x>
+      <y>672</y>
+      <w>192</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>300.0;50.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>708</x>
+      <y>684</y>
+      <w>168</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;30.0;260.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>108</x>
+      <y>234</y>
+      <w>18</w>
+      <h>360</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;580.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1104</x>
+      <y>234</y>
+      <w>24</w>
+      <h>414</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;670.0;20.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>246</x>
+      <y>234</y>
+      <w>18</w>
+      <h>114</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;170.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>918</x>
+      <y>234</y>
+      <w>18</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
   </element>
 </diagram>
