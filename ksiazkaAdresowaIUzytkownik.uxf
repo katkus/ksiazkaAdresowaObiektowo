@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="13.3">
-  <zoom_level>6</zoom_level>
+  <zoom_level>10</zoom_level>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>504</x>
-      <y>606</y>
-      <w>210</w>
-      <h>216</h>
+      <x>730</x>
+      <y>910</y>
+      <w>350</w>
+      <h>360</h>
     </coordinates>
     <panel_attributes>KsiazkaAdresowa
 --
 -UzytkownikMenedzer: uzytkownikMenedzer
--AdresatMenedzer: adresatMenedzer
+-*adresatMenedzer: AdresatMenedzer
 -NAZWA_PLIKU_Z_ADRESATAMI: String
 --
 +KsiazkaAdresowa()
@@ -28,7 +28,7 @@
 +wyszukajAdresatowPoNazwisku(): void
 +usunAdresata(): void
 +edytujAdresata(): void
-+czyUzytkownikJestZalogowany(): bool
++czyUzytkownikJestZalogowany(): Bool
 +wybierzOpcjeZMenuGlownego(): Char
 +wybierzOpcjeZMenuUzytkownika(): Char
 
@@ -40,10 +40,10 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>180</x>
-      <y>336</y>
-      <w>192</w>
-      <h>108</h>
+      <x>190</x>
+      <y>460</y>
+      <w>320</w>
+      <h>180</h>
     </coordinates>
     <panel_attributes>Uzytkownik
 --
@@ -62,10 +62,10 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>78</x>
-      <y>582</y>
-      <w>252</w>
-      <h>192</h>
+      <x>20</x>
+      <y>870</y>
+      <w>420</w>
+      <h>320</h>
     </coordinates>
     <panel_attributes>UzytkownikMenedzer
 --
@@ -75,24 +75,24 @@
 --
 -podajDaneNowegoUzytkownika() : Uzytkownik
 -pobierzIdNowegoUzytkownika() : Integer
--czyIstniejeLogin() : bool
+-czyIstniejeLogin() : Bool
 +UzytkownikMenedzer()
 +rejestracjaUzytkownika(): void
 +logowanieUzytkownika(): void
 +wylogowanieUzytkownika: void
 +zmianaHaslaZalogowanegoUzytkownika(): void
 +wypiszWszystkichUzytkownikow : void
-+czyUzytkownikJestZalogowany(): bool
++czyUzytkownikJestZalogowany(): Bool
 +pobierzIdZalogowanegoUzytkownika(): Integer</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>66</x>
-      <y>144</y>
-      <w>354</w>
-      <h>96</h>
+      <x>0</x>
+      <y>140</y>
+      <w>590</w>
+      <h>160</h>
     </coordinates>
     <panel_attributes>PlikZUzytkownikami
 --
@@ -109,10 +109,10 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>486</x>
-      <y>318</y>
-      <w>264</w>
-      <h>96</h>
+      <x>700</x>
+      <y>430</y>
+      <w>440</w>
+      <h>160</h>
     </coordinates>
     <panel_attributes>MetodyPomocnicze
 --
@@ -129,10 +129,10 @@ _+wczytajLiczbeCalkowita(): Integer_</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>864</x>
-      <y>636</y>
-      <w>276</w>
-      <h>174</h>
+      <x>1330</x>
+      <y>960</y>
+      <w>460</w>
+      <h>290</h>
     </coordinates>
     <panel_attributes>AdresatMenedzer
 --
@@ -142,25 +142,28 @@ _+wczytajLiczbeCalkowita(): Integer_</panel_attributes>
 --
 -podajDaneNowegoAdresata(): Adresat
 -wyswietlDaneAdresata(): void
+-wyswietlIloscWyszukanychAdresatow(): void
+-podajIdWybranegoAdresata(): Integer
+-wybierzOpcjeZMenuEdycja(): Char
 +AdresatMenedzer()
 +dodajAdresata(): void
 +wyswietlWszystkichAdresatow(): void
-+wyswietlIloscWyszukanychAdresatow(): void
+//+wyswietlIloscWyszukanychAdresatow(): void
 +wyszukajAdresatowPoImieniu(): void
 +wyszukajAdresatowPoNazwisku(): void
-+podajIdWybranegoAdresata(): Integer
+//+podajIdWybranegoAdresata(): Integer
 +usunAdresata(): void
-+wybierzOpcjeZMenuEdycja(): Char
+//+wybierzOpcjeZMenuEdycja(): Char
 +edytujAdresata(): void</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>876</x>
-      <y>282</y>
-      <w>156</w>
-      <h>240</h>
+      <x>1350</x>
+      <y>370</y>
+      <w>260</w>
+      <h>400</h>
     </coordinates>
     <panel_attributes>Adresat
 --
@@ -192,10 +195,10 @@ _+wczytajLiczbeCalkowita(): Integer_</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>852</x>
-      <y>66</y>
-      <w>354</w>
-      <h>174</h>
+      <x>1310</x>
+      <y>10</y>
+      <w>590</w>
+      <h>290</h>
     </coordinates>
     <panel_attributes>PlikZAdresatami
 --
@@ -209,7 +212,7 @@ _+wczytajLiczbeCalkowita(): Integer_</panel_attributes>
 -zmienNazwePliku(): void
 -edytujWybranaLinieWPliku(): void
 +PlikZAdresatami()
-+dopiszAdresataDoPliku(): bool
++dopiszAdresataDoPliku(): Bool
 +wczytajAdresatowZalogowanegoUzytkownikaZPliku(): vector &lt;Adresat&gt;
 +pobierzIdOstatniegoAdresata(): Integer
 +usunWybranaLinieWPliku(): void
@@ -219,10 +222,10 @@ _+wczytajLiczbeCalkowita(): Integer_</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>510</x>
-      <y>60</y>
-      <w>258</w>
-      <h>66</h>
+      <x>740</x>
+      <y>0</y>
+      <w>430</w>
+      <h>110</h>
     </coordinates>
     <panel_attributes>PlikTekstowy
 --
@@ -230,16 +233,16 @@ _+wczytajLiczbeCalkowita(): Integer_</panel_attributes>
 --
 +PlikTekstowy()
 +pobierzNazwePliku() : String
-_+czyPlikJestPusty(): bool_</panel_attributes>
++czyPlikJestPusty(): Bool</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>762</x>
-      <y>84</y>
-      <w>102</w>
-      <h>18</h>
+      <x>1160</x>
+      <y>40</y>
+      <w>170</w>
+      <h>30</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;10.0;150.0;10.0</additional_attributes>
@@ -247,10 +250,10 @@ _+czyPlikJestPusty(): bool_</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>414</x>
-      <y>90</y>
-      <w>108</w>
-      <h>114</h>
+      <x>580</x>
+      <y>50</y>
+      <w>180</w>
+      <h>190</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>160.0;10.0;10.0;170.0</additional_attributes>
@@ -258,65 +261,10 @@ _+czyPlikJestPusty(): bool_</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>324</x>
-      <y>408</y>
-      <w>174</w>
-      <h>186</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;.</panel_attributes>
-    <additional_attributes>10.0;290.0;270.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>570</x>
-      <y>408</y>
-      <w>18</w>
-      <h>210</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;.</panel_attributes>
-    <additional_attributes>10.0;330.0;10.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>744</x>
-      <y>408</y>
-      <w>132</w>
-      <h>240</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;.</panel_attributes>
-    <additional_attributes>200.0;380.0;10.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>414</x>
-      <y>228</y>
-      <w>90</w>
-      <h>102</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;.</panel_attributes>
-    <additional_attributes>10.0;10.0;130.0;150.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>744</x>
-      <y>234</y>
-      <w>120</w>
-      <h>96</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;.</panel_attributes>
-    <additional_attributes>180.0;10.0;10.0;140.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>198</x>
-      <y>438</y>
-      <w>18</w>
-      <h>156</h>
+      <x>220</x>
+      <y>630</y>
+      <w>30</w>
+      <h>260</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;240.0;10.0;10.0</additional_attributes>
@@ -324,10 +272,10 @@ _+czyPlikJestPusty(): bool_</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>954</x>
-      <y>516</y>
-      <w>18</w>
-      <h>132</h>
+      <x>1480</x>
+      <y>760</y>
+      <w>30</w>
+      <h>220</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;200.0;10.0;10.0</additional_attributes>
@@ -335,10 +283,10 @@ _+czyPlikJestPusty(): bool_</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>324</x>
-      <y>672</y>
-      <w>192</w>
-      <h>42</h>
+      <x>430</x>
+      <y>1020</y>
+      <w>320</w>
+      <h>70</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
     <additional_attributes>300.0;50.0;10.0;10.0</additional_attributes>
@@ -346,10 +294,10 @@ _+czyPlikJestPusty(): bool_</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>708</x>
-      <y>684</y>
-      <w>168</w>
-      <h>30</h>
+      <x>1070</x>
+      <y>1040</y>
+      <w>280</w>
+      <h>50</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;30.0;260.0;10.0</additional_attributes>
@@ -357,10 +305,10 @@ _+czyPlikJestPusty(): bool_</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>108</x>
-      <y>234</y>
-      <w>18</w>
-      <h>360</h>
+      <x>70</x>
+      <y>290</y>
+      <w>30</w>
+      <h>600</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;580.0;10.0;10.0</additional_attributes>
@@ -368,10 +316,10 @@ _+czyPlikJestPusty(): bool_</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1104</x>
-      <y>234</y>
-      <w>24</w>
-      <h>414</h>
+      <x>1730</x>
+      <y>290</y>
+      <w>40</w>
+      <h>690</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;670.0;20.0;10.0</additional_attributes>
@@ -379,10 +327,10 @@ _+czyPlikJestPusty(): bool_</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>246</x>
-      <y>234</y>
-      <w>18</w>
-      <h>114</h>
+      <x>300</x>
+      <y>290</y>
+      <w>30</w>
+      <h>190</h>
     </coordinates>
     <panel_attributes>lt=&lt;.</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;170.0</additional_attributes>
@@ -390,12 +338,67 @@ _+czyPlikJestPusty(): bool_</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>918</x>
-      <y>234</y>
-      <w>18</w>
-      <h>60</h>
+      <x>1420</x>
+      <y>290</y>
+      <w>30</w>
+      <h>100</h>
     </coordinates>
     <panel_attributes>lt=&lt;.</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>880</x>
+      <y>580</y>
+      <w>30</w>
+      <h>350</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;330.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>430</x>
+      <y>580</y>
+      <w>290</w>
+      <h>310</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;290.0;270.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1130</x>
+      <y>580</y>
+      <w>240</w>
+      <h>400</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>220.0;380.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1130</x>
+      <y>290</y>
+      <w>200</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;140.0;180.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>580</x>
+      <y>290</y>
+      <w>140</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>120.0;140.0;10.0;10.0</additional_attributes>
   </element>
 </diagram>
