@@ -11,7 +11,7 @@
     </coordinates>
     <panel_attributes>KsiazkaAdresowa
 --
--UzytkownikMenedzer: uzytkownikMenedzer
+-uzytkownikMenedzer: UzytkownikMenedzer
 -*adresatMenedzer: AdresatMenedzer
 -NAZWA_PLIKU_Z_ADRESATAMI: String
 --
@@ -97,7 +97,7 @@
     <panel_attributes>PlikZUzytkownikami
 --
 --
--zamienDaneUzytkownikaNaLinieZDanymiOddzielonaPionowymiKreskami(): String
+-zamienDaneUzytkownikaNaLinieZDanymiOddzielonePionowymiKreskami(): String
 -pobierzDaneUzytkownika(): Uzytkownik
 +PlikZUyztkownikami()
 +dopiszUzytkownikaDoPliku(): void
