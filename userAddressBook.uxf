@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="13.3">
-  <zoom_level>14</zoom_level>
+  <zoom_level>10</zoom_level>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1022</x>
-      <y>1274</y>
-      <w>490</w>
-      <h>504</h>
+      <x>730</x>
+      <y>910</y>
+      <w>350</w>
+      <h>360</h>
     </coordinates>
     <panel_attributes>AddressBook
 --
@@ -17,15 +17,15 @@
 --
 +AddressBook()
 +~AddressBook()
-+userRegistration(): void
-+userLogin(): void
-+userLogout(): void
-+changeLoggedInUserPassword(): void
++userRegistration(): void //prowadzący przetłumaczył: registerUser(): void
++userLogin(): void //prowadzący przetłumaczył: loginUser(): void
++userLogout(): void //prowadzący przetłumaczył: logoutUser(): void
++changeLoggedInUserPassword(): void //prowadzący przetłumaczył: changePassword() : void
 +displayAllUsers(): void
 +addRecipient(): void
 +displayAllRecipients(): void
-+searchRecipientsByName(): void
-+searchRecipientsBySurname(): void
++searchRecipientsByName(): void //prowadzący przetłumaczył: searchRecipientsByFirstName(): void
++searchRecipientsBySurname(): void //prowadzący przetłumaczył: searchRecipientsByLastName(): void
 +deleteRecipient(): void
 +editRecipient(): void
 +isUserLoggedIn(): Bool
@@ -40,10 +40,10 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>266</x>
-      <y>644</y>
-      <w>448</w>
-      <h>252</h>
+      <x>190</x>
+      <y>460</y>
+      <w>320</w>
+      <h>180</h>
     </coordinates>
     <panel_attributes>User
 --
@@ -62,25 +62,25 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>28</x>
-      <y>1218</y>
-      <w>588</w>
-      <h>448</h>
+      <x>20</x>
+      <y>870</y>
+      <w>420</w>
+      <h>320</h>
     </coordinates>
     <panel_attributes>UserManager
 --
--LoggedInUserId: Integer
+-loggedInUserId: Integer
 -users: vector &lt;User&gt;
 -fileWithUsers: FileWithUsers
 --
--enterNewUserData(): User
+-enterNewUserData(): User // prowadzący przetłumaczył: getNewUserData() : User
 -getNewUserId(): Integer
--doesLoginExist(): Bool
+-doesLoginExist(): Bool // prowadzący przetłumaczył: loginExists() : Bool
 +UserManager()
-+userRegistration(): void
-+userLogin(): void
-+userLogout(): void
-+changeLoggedInUserPassword(): void
++userRegistration(): void // prowadzący przetłumaczył: registerUser(): void
++userLogin(): void // prowadzący przetłumaczył: loginUser(): void
++userLogout(): void // prowadzący przetłumaczył: logoutUser(): void
++changeLoggedInUserPassword(): void // prowadzący przetłumaczył:changePassword() : void
 +displayAllUsers(): void
 +isUserLoggedIn(): Bool
 +getLoggedInUserId(): Integer</panel_attributes>
@@ -90,14 +90,14 @@
     <id>UMLClass</id>
     <coordinates>
       <x>0</x>
-      <y>196</y>
-      <w>826</w>
-      <h>224</h>
+      <y>140</y>
+      <w>590</w>
+      <h>160</h>
     </coordinates>
     <panel_attributes>FileWithUsers
 --
 --
--replaceUserDataWithDataLinesSeparatedByVerticalDashes(): String
+-replaceUserDataWithDataLinesSeparatedByVerticalDashes(): String // prowadzący: convertUserDataToLineWithDashes(): String
 -getUserData(): User
 +FileWithUsers()
 +addUserToFile(): void
@@ -109,30 +109,30 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>980</x>
-      <y>602</y>
-      <w>686</w>
-      <h>224</h>
+      <x>700</x>
+      <y>440</y>
+      <w>490</w>
+      <h>160</h>
     </coordinates>
     <panel_attributes>AuxiliaryMethods
 --
 --
-_+conversionIntToString(): String_
-_+conversionStringToInt(): Integer_
-_+readLine(): String_
+_+conversionIntToString(): String_ // prowadzący: convertIntegerToString() : String
+_+conversionStringToInt(): Integer_ // prowadzący: convertStringToInteger() : Integer
+_+readLine(): String_ // prowadzący: loadLine(): String
 _+convertFirstLetterIntoUpperCaseAndOthersIntoLowerCase(): String_
-_+readCharacter(): Char_
+_+readCharacter(): Char_ // prowadzący: loadChar() : Char
 _+getNumber(): String_
-_+readInteger(): Integer_</panel_attributes>
+_+readInteger(): Integer_ // prowadzący: loadInteger(): Integer</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1862</x>
-      <y>1344</y>
-      <w>644</w>
-      <h>406</h>
+      <x>1330</x>
+      <y>960</y>
+      <w>460</w>
+      <h>290</h>
     </coordinates>
     <panel_attributes>Recipient Manager
 --
@@ -140,10 +140,10 @@ _+readInteger(): Integer_</panel_attributes>
 -recipients: vector &lt;Recipient&gt;
 -fileWithRecipients: FileWithRecipients
 --
--enterNewRecipientData(): Recipient
+-enterNewRecipientData(): Recipient // prowadzący: getNewRecipientData() : Recipient
 -displayRecipientData(): void
--displayNumberOfRecipientsSearched(): void
--enterSelectedRecipientId(): Integer
+-displayNumberOfRecipientsSearched(): void // prowadzący: displayAmountOfFoundRecipients(): void
+-enterSelectedRecipientId(): Integer // getSelectedRecipientId(): Integer
 -selectOptionFromEditMenu(): Char
 +Recipient Manager()
 +addRecipient(): void
@@ -157,18 +157,18 @@ _+readInteger(): Integer_</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1890</x>
-      <y>518</y>
-      <w>364</w>
-      <h>560</h>
+      <x>1350</x>
+      <y>370</y>
+      <w>260</w>
+      <h>400</h>
     </coordinates>
     <panel_attributes>Recipient
 --
 -id: Integer
 -userId: Integer
--name: String
--surname: String
--telephone: String
+-name: String // prowadzący: firstName : String
+-surname: String // prowadzący: lastName : String
+-telephone: String // prowadzący: phoneNumber : String
 -email: String
 -address: String
 --
@@ -192,26 +192,27 @@ _+readInteger(): Integer_</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1834</x>
-      <y>14</y>
-      <w>826</w>
-      <h>406</h>
+      <x>1310</x>
+      <y>10</y>
+      <w>590</w>
+      <h>290</h>
     </coordinates>
     <panel_attributes>FileWithRecipients
 --
 -lastRecipientId: Integer
 --
--replaceRecipientDataWithDataLinesSeparatedByVerticalDashes(): String
--getUserIdOfDataSeparatedByVerticalDashes(): Integer
--getRecipientIdOfDataSeparatedByVerticalDashes(): Integer
+-replaceRecipientDataWithDataLinesSeparatedByVerticalDashes(): String // prowadzący:  convertRecipientDataToLineWithDashes() : String
+-getUserIdOfDataSeparatedByVerticalDashes(): Integer // prowadzący:  getUserId() : Integer
+-getRecipientIdOfDataSeparatedByVerticalDashes(): Integer // prowadzący: getRecipientId() : Integer
 -getRecipientData(): Recipient
 -deleteFile(): void
--replaceFileName(): void
+-replaceFileName(): void // prowadzący: changeFileName() : void
 -editSelectedLineInFile(): void
 +FileWithRecipients()
 +addRecipientToFile(): Bool
 +loadRecipientsOfLoggedInUserFromFile(): vector &lt;Recipient&gt;
-+getLastRecipientId(): Integer
++getLastRecipientId(): Integer // prowadzący: - -&gt;powinna być metoda prywatna
++deleteRecipient(): void
 +deleteSelectedLineInFile(): void
 +updateSelectedRecipientData(): void</panel_attributes>
     <additional_attributes/>
@@ -219,10 +220,10 @@ _+readInteger(): Integer_</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1036</x>
+      <x>740</x>
       <y>0</y>
-      <w>602</w>
-      <h>154</h>
+      <w>430</w>
+      <h>110</h>
     </coordinates>
     <panel_attributes>TextFile 
 --
@@ -236,10 +237,10 @@ _+readInteger(): Integer_</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1624</x>
-      <y>56</y>
-      <w>238</w>
-      <h>42</h>
+      <x>1160</x>
+      <y>40</y>
+      <w>170</w>
+      <h>30</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;10.0;150.0;10.0</additional_attributes>
@@ -247,10 +248,10 @@ _+readInteger(): Integer_</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>812</x>
-      <y>70</y>
-      <w>252</w>
-      <h>266</h>
+      <x>580</x>
+      <y>50</y>
+      <w>180</w>
+      <h>190</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>160.0;10.0;10.0;170.0</additional_attributes>
@@ -258,10 +259,10 @@ _+readInteger(): Integer_</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>308</x>
-      <y>882</y>
-      <w>42</w>
-      <h>364</h>
+      <x>220</x>
+      <y>630</y>
+      <w>30</w>
+      <h>260</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;240.0;10.0;10.0</additional_attributes>
@@ -269,10 +270,10 @@ _+readInteger(): Integer_</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>2072</x>
-      <y>1064</y>
-      <w>42</w>
-      <h>308</h>
+      <x>1480</x>
+      <y>760</y>
+      <w>30</w>
+      <h>220</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;200.0;10.0;10.0</additional_attributes>
@@ -280,10 +281,10 @@ _+readInteger(): Integer_</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>602</x>
-      <y>1428</y>
-      <w>448</w>
-      <h>98</h>
+      <x>430</x>
+      <y>1020</y>
+      <w>320</w>
+      <h>70</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
     <additional_attributes>300.0;50.0;10.0;10.0</additional_attributes>
@@ -291,10 +292,10 @@ _+readInteger(): Integer_</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1498</x>
-      <y>1456</y>
-      <w>392</w>
-      <h>70</h>
+      <x>1070</x>
+      <y>1040</y>
+      <w>280</w>
+      <h>50</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;30.0;260.0;10.0</additional_attributes>
@@ -302,10 +303,10 @@ _+readInteger(): Integer_</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>98</x>
-      <y>406</y>
-      <w>42</w>
-      <h>840</h>
+      <x>70</x>
+      <y>290</y>
+      <w>30</w>
+      <h>600</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;580.0;10.0;10.0</additional_attributes>
@@ -313,10 +314,10 @@ _+readInteger(): Integer_</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>2422</x>
-      <y>406</y>
-      <w>56</w>
-      <h>966</h>
+      <x>1730</x>
+      <y>290</y>
+      <w>40</w>
+      <h>690</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;670.0;20.0;10.0</additional_attributes>
@@ -324,10 +325,10 @@ _+readInteger(): Integer_</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>420</x>
-      <y>406</y>
-      <w>42</w>
-      <h>266</h>
+      <x>300</x>
+      <y>290</y>
+      <w>30</w>
+      <h>190</h>
     </coordinates>
     <panel_attributes>lt=&lt;.</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;170.0</additional_attributes>
@@ -335,10 +336,10 @@ _+readInteger(): Integer_</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1988</x>
-      <y>406</y>
-      <w>42</w>
-      <h>140</h>
+      <x>1420</x>
+      <y>290</y>
+      <w>30</w>
+      <h>100</h>
     </coordinates>
     <panel_attributes>lt=&lt;.</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
@@ -346,56 +347,56 @@ _+readInteger(): Integer_</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1232</x>
-      <y>812</y>
-      <w>42</w>
-      <h>490</h>
+      <x>880</x>
+      <y>590</y>
+      <w>30</w>
+      <h>340</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>10.0;330.0;10.0;10.0</additional_attributes>
+    <additional_attributes>10.0;320.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>602</x>
-      <y>812</y>
-      <w>406</w>
-      <h>434</h>
+      <x>430</x>
+      <y>590</y>
+      <w>290</w>
+      <h>300</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>10.0;290.0;270.0;10.0</additional_attributes>
+    <additional_attributes>10.0;280.0;270.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1652</x>
-      <y>812</y>
-      <w>266</w>
-      <h>560</h>
+      <x>1180</x>
+      <y>590</y>
+      <w>190</w>
+      <h>390</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>170.0;380.0;10.0;10.0</additional_attributes>
+    <additional_attributes>170.0;370.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1582</x>
-      <y>406</y>
-      <w>280</w>
-      <h>224</h>
+      <x>1130</x>
+      <y>290</y>
+      <w>200</w>
+      <h>170</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>10.0;140.0;180.0;10.0</additional_attributes>
+    <additional_attributes>10.0;150.0;180.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>812</x>
-      <y>406</y>
-      <w>196</w>
-      <h>224</h>
+      <x>580</x>
+      <y>290</y>
+      <w>140</w>
+      <h>170</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>120.0;140.0;10.0;10.0</additional_attributes>
+    <additional_attributes>120.0;150.0;10.0;10.0</additional_attributes>
   </element>
 </diagram>
